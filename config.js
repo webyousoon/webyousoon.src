@@ -10,7 +10,10 @@ exports.config = {
     },
     stylesheets: {
       joinTo: {
-        'css/app.css': /^(app|vendor)/
+        'css/app.css': /^(app|vendor|bower_components\/normalize.css\/normalize.css)/
+      },
+      order: {
+        before: ['bower_components/normalize.css/normalize.css']
       }
     },
     templates: {

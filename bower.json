@@ -2,6 +2,8 @@
   "name": "your-app",
   "version": "0.0.1",
   "main": "public/app.js",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  },
   "overrides": {}
 }
