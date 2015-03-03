@@ -1,3 +1,6 @@
+@import "compass";
+
 h1 {
   color: green;
+  @include opacity(0.5);
 }
