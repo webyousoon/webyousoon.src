@@ -1,0 +1,35 @@
+@import "susy";
+
+// Configuring Susy Defaults
+$susy: (
+  global-box-sizing: border-box,
+  use-custom: (rem: true)
+);
+
+@include border-box-sizing;
+
+
+.container {
+  background-color: #fbeecb;
+}
+
+.ag1, .ag3 {
+  background-color: blue;
+}
+
+.ag2 {
+  background-color: pink;
+}
+
+.ag1 {
+  @include span(2 of 10);
+}
+
+.ag2 {
+  @include span(6 of 10);
+  @include clearfix; 
+}
+
+.ag3 {
+  @include span(2 of 10 last);
+}

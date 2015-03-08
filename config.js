@@ -19,5 +19,12 @@ exports.config = {
     templates: {
       joinTo: 'js/app.js'
     }
+  },
+  plugins: {
+    sass: {
+      options: {
+        includePaths: ['bower_components/susy/sass']
+      }
+    }
   }
 };

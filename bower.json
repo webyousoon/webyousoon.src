@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "main": "public/app.js",
   "dependencies": {
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "susy": "~2.2.2"
   },
   "overrides": {}
 }
