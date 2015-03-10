@@ -1,36 +1,143 @@
-@import "susy";
-
-// Configuring Susy Defaults
-$susy: (
-  global-box-sizing: border-box,
-  use-custom: (rem: true
-    )
-  );
-
-@include border-box-sizing;
-
-
-.container {
-  background-color: #fbeecb;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.ag1, .ag3 {
-  background-color: #71dad2;
+// .board, #contactus {
+//   overflow: hidden;
+//   *zoom: 1; }
+
+
+.col-single,
+.col-double {
+  padding-left: 16px;
+  padding-right: 16px; 
+  margin: 0;
 }
 
-.ag2 {
-  background-color: #fae7b3;
+@include mq(medium) {
+  .col-double {
+    padding-left: 0;
+    padding-right: 0; 
+  }
+
+  .col-half {
+    padding-left: 16px;
+    padding-right: 16px;
+    float: left;
+    width: 50%;
+  }
+  .col-half + .col-half {
+    float: right;
+  }
 }
 
-.ag1 {
-  @include span(2 of 10);
+@include mq(large) {
+  .wrapper {
+    margin: auto;
+    // width: 960px;
+  }
+
+  .col-single {
+    float: left;
+    width: 33.33333%;
+  }
+  .col-double {
+    float: right;
+    width: 66.66666%;
+  }
+
+  .col-half {
+    padding-left: 16px;
+    padding-right: 16px; 
+    margin: 0;
+  }
+  .col-half {
+    float: left;
+    width: 50%;
+  }
+  .col-half + .col-half {
+    float: right;
+  }
 }
 
-.ag2 {
-  @include span(6 of 10);
-  @include clearfix; 
+@include mq(xlarge) {
+  .wrapper {
+    margin: auto;
+    width: 960px;
+  }
+
+  .col-single {
+    float: left;
+    width: 33.33333%;
+  }
+  .col-double {
+    float: right;
+    width: 66.66666%;
+  }
+
+  .col-half {
+    padding-left: 16px;
+    padding-right: 16px; 
+    margin: 0;
+  }
+  .col-half {
+    float: left;
+    width: 50%;
+  }
+  .col-half + .col-half {
+    float: right;
+  }
 }
 
-.ag3 {
-  @include span(2 of 10 last);
-}
+
+// @import "compass";
+// @import "susy";
+
+// // Configuring Susy Defaults
+// $susy: (
+//   columns: 12,
+//   // container: 1024px,
+//   column-width: 80px,
+//   gutter-width: 0,
+//   global-box-sizing: border-box
+//   );
+
+// @include border-box-sizing;
+
+// .board {
+//   @include clearfix;
+// }
+
+// .col-12 {
+//   padding-top: 38px;
+//   @include span(12);
+// }
+
+// .col-4, .col-6, .col-8, .col-12 {
+//   padding-left: 16px;
+//   padding-right: 16px;
+// }
+
+// .col-4 {
+//   // background: red;
+//   @include span(4);
+// }
+
+// .col-6 {
+//   @include span(6);
+//   // @include last;
+// }
+
+// .col-8 {
+//   // background: green;
+//   padding-top: 38px;
+//   @include span(8);
+//   @include last;
+// }
+
+
+// .col-6 + .col-6 {
+//   @include last;
+// }

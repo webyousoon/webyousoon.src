@@ -10,21 +10,14 @@ exports.config = {
     },
     stylesheets: {
       joinTo: {
-        'css/app.css': /^(app|vendor|bower_components\/normalize.css\/normalize.css)/
+        'css/app.css': /^(app|vendor)/
       },
       order: {
-        before: ['bower_components/normalize.css/normalize.css']
+        before: ['vendor/styles/normalize.css']
       }
     },
     templates: {
       joinTo: 'js/app.js'
-    }
-  },
-  plugins: {
-    sass: {
-      options: {
-        includePaths: ['bower_components/susy/sass']
-      }
     }
   }
 };

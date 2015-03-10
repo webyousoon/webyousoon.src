@@ -1,8 +1,115 @@
-@import "compass";
 
+
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/fonts";
+@import "partials/icons-streamline";
+@import "partials/icons-fontawesome";
 @import "partials/layouts";
 
-h1 {
-  color: green;
-  @include opacity(0.5);
+body {
+  background: $color-gray-lightest;
+  color: $color-text;
+
+  font-family: $font-text;
+  font-size: 14px;
+  line-height: 23px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 32px;
+  }
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  > footer {
+      border-top: 4px solid $color-gray-darker;
+    .legal {
+      border-top: 2px solid $color-gray-darker;
+    }
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+
+
+#contactus {
+  background: $color-first;
+  // colo
+
+  // background: $color-gray-lightest;
+  color: $color-first-annex;
+  font-family: $font-handwriting;
+  font-size: 64px;
+  line-height: 85px;
+  i {
+    font-size: 108px;
+  }
+  .picture {
+    text-align: center;
+    @media screen and (min-width: $screen-m) {
+      text-align: right;
+    }
+  }
+}
+
+
+
+
+.bigger {
+  i {
+    font-size: 24px;
+  }
+  font-size: 16px;
+}
+
+.board {
+  padding-bottom: 95px;
+  header {
+    position: relative;
+  }
+  header > i {
+    color: $color-gray-lightest;
+    font-size: 48px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    // z-index: 1;
+  }
+  h1 {
+    color: $color-gray-lightest;
+    font-family: $font-text;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h2 {
+    border-top: 2px solid $color-first;
+    color: $color-gray-medium;
+    font-size: 24px;
+    padding-top: 20px;
+    // z-index: 2;
+  }
+}
+
+.focus {
+  color: $color-first;
+}
+
+.container {
+  background: $color-bg;
+  color: $color-text;
+}
+
+.container-inverse {
+  background: $color-bg-inverse;
+  color: $color-text-inverse;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
 }
