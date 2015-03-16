@@ -1,0 +1,2 @@
+# Indique l'adresse du fichier sitemap.xml
+sitemap: http://www.webyousoon.com/sitemap.xml
