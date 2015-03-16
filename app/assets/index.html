@@ -11,20 +11,33 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/app.css">
-        <link rel="stylesheet" href="css/layouts.css">
 
         <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
+
+      <div class="wrapper container">
+
+          <header role="banner">
+            <nav id="nav-toggle" role="navigation">
+              <a href="#" id="btn-toggle" class="">Menu</a>
+              <ul id="list-toggle" class="list-unstyled">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#values">Valeurs</a></li>
+                <li><a id="link-contactus" href="#contactus">Contact</a></li>
+                <li><a id="btn-close-toggle" href="#">Fermer</a></li>
+              </ul>
+            </nav>
 <!--           <section id="teaser">
             <figure>
               <img src="img/bg-teaser.png" alt="Une superbe photo">
               <figcaption>Des applications Web et mobiles conçues pour vous</figcaption>
             </figure>
           </section> -->
-      <div class="wrapper container">
 
-          <header role="banner">
+          <!-- <div style="clear: both;"></div> -->
+            
 
           </header>
 
@@ -56,6 +69,7 @@
                     <p>Conception, maquettage et développement de solutions ergonomiques pour vos utilisateurs et pérennes techniquement.</p>
                   </section>
                 </div>
+                <div style="clear: both;"></div>
               </div>
               <div class="col-double">
                 <div class="col-half">
@@ -64,7 +78,7 @@
                       <h2>Mise en service</h2>
                       <i class="icon icon-cloud-upload"></i>
                     </header>
-                    <p>Déploiement, hébergement des applications Web et accompagnement sur les stores privés pour la publication des solutions mobiles.</p>
+                    <p>Déploiement, hébergement des applications Web et publication sur les stores privés (AppStore, Google Play) pour les applications mobiles.</p>
                   </section>
                 </div>
                 <div class="col-half">
@@ -73,9 +87,10 @@
                       <h2>Suivi et gestion</h2>
                       <i class="icon icon-pulse-graph-3"></i>
                     </header>
-                    <p>Maintenances, évolutions et analyses du trafic de l'existant pour améliorer constamment vos applications.</p>
+                    <p>Maintenance, évolutions et analyse du trafic pour améliorer constamment vos applications.</p>
                   </section>
                 </div>
+                <div style="clear: both;"></div>
               </div>
             </section>
             <!-- /#services -->
@@ -118,6 +133,7 @@
                     <p>Nous priviligierons toujours les solutions les plus simples qui apporteront de la valeur à vos utilisateurs.</p>
                   </section>
                 </div>
+                <div style="clear: both;"></div>
               </div>
               <div class="col-double">
                 <div class="col-half">
@@ -126,7 +142,7 @@
                       <h2>Amélioration continue</h2>
                       <i class="icon icon-loop-3"></i>
                     </header>
-                    <p>Nous ne pensons pas trouver la solution parfaite du premier coup. C'est pourquoi nous analysons régulièrement nos résultats et changeons d'approche si besoin.</p>
+                    <p>Nous ne prétendons pas trouver la solution parfaite du premier coup. C'est pourquoi nous analysons régulièrement les résultats et recadrons l'approche si besoin.</p>
                   </section>
                 </div>
                 <div class="col-half">
@@ -138,6 +154,7 @@
                     <p>Nous échangeons et apprenons régulièrement avec nos pairs car le savoir est la clé du travail "bien fait".</p>
                   </section>
                 </div>
+                <div style="clear: both;"></div>
               </div>
             </section>
 
@@ -145,7 +162,7 @@
 
 
 
-          <footer role="contentinfo" class="col-12 container-inverse board">
+          <footer role="contentinfo" class="container-inverse board">
 
             <div class="col-single">
             </div>
@@ -204,10 +221,27 @@
           </footer>
 
 
-        <script src="/js/vendor.js"></script>
 
       </div>
       <!-- /.container -->
+
+
+      <script src="/js/vendor.js"></script>
+      <script src="/js/app.js"></script>
+
+      <script>
+        var jqlike = require('scripts/jqlike');
+        var btnToggle = document.getElementById('btn-toggle');
+        btnToggle.onclick = function() {
+          jqlike.toggleClass(this, 'on');
+          return false;
+        };
+        var btnCloseToggle = document.getElementById('btn-close-toggle');
+        btnCloseToggle.onclick = function() {
+          jqlike.toggleClass(btnToggle, 'on');
+          return false;
+        };
+      </script>
 
     </body>
 </html>

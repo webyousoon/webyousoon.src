@@ -1,12 +1,11 @@
 
-
-
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/fonts";
 @import "partials/icons-streamline";
 @import "partials/icons-fontawesome";
 @import "partials/layouts";
+@import "partials/navigation";
 
 body {
   background: $color-gray-lightest;
@@ -33,6 +32,14 @@ body {
     }
   }
 }
+
+a {
+  color: $color-first-annex;
+  font-family: $font-text;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 
 .icon-inverse {
   transform: rotate(90deg);
