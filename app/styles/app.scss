@@ -17,7 +17,7 @@ body {
   line-height: 23px;
 
   @media screen and (min-width: 1024px) {
-    padding: 32px;
+    padding: $gutter-width-m;
   }
 
   -webkit-font-smoothing: antialiased;
@@ -34,7 +34,9 @@ body {
   }
 }
 
-
+.icon-inverse {
+  transform: rotate(90deg);
+}
 
 #contactus {
   background: $color-first;
@@ -67,6 +69,7 @@ body {
 }
 
 .board {
+  
   padding-bottom: 95px;
   header {
     position: relative;

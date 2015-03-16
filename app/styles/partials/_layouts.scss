@@ -11,8 +11,8 @@
 
 .col-single,
 .col-double {
-  padding-left: 16px;
-  padding-right: 16px; 
+  padding-left: $gutter-width-s;
+  padding-right: $gutter-width-s; 
   margin: 0;
 }
 
@@ -23,8 +23,8 @@
   }
 
   .col-half {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: $gutter-width-s;
+    padding-right: $gutter-width-s;
     float: left;
     width: 50%;
   }
@@ -49,8 +49,8 @@
   }
 
   .col-half {
-    padding-left: 16px;
-    padding-right: 16px; 
+    padding-left: $gutter-width-s;
+    padding-right: $gutter-width-s; 
     margin: 0;
   }
   .col-half {
@@ -75,19 +75,6 @@
   .col-double {
     float: right;
     width: 66.66666%;
-  }
-
-  .col-half {
-    padding-left: 16px;
-    padding-right: 16px; 
-    margin: 0;
-  }
-  .col-half {
-    float: left;
-    width: 50%;
-  }
-  .col-half + .col-half {
-    float: right;
   }
 }
 

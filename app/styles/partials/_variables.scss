@@ -37,4 +37,11 @@ $screen-s: 480px;
 $screen-m: 768px;
 $screen-l: 1024px;
 
+$gutter-height: 16px;
+$gutter-width: 16px;
+$gutter-width-s: $gutter-width;
+$gutter-width-m: $gutter-width * 2;
+// $gutter-width-l: $gutter-width;
+
+
 
