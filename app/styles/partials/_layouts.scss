@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 
-// .board, #contactus {
-//   overflow: hidden;
-//   *zoom: 1; }
+.board, #contactus {
+  overflow: hidden;
+  *zoom: 1;
+}
 
 
 .col-single,
@@ -77,54 +78,3 @@
     width: 66.66666%;
   }
 }
-
-
-// @import "compass";
-// @import "susy";
-
-// // Configuring Susy Defaults
-// $susy: (
-//   columns: 12,
-//   // container: 1024px,
-//   column-width: 80px,
-//   gutter-width: 0,
-//   global-box-sizing: border-box
-//   );
-
-// @include border-box-sizing;
-
-// .board {
-//   @include clearfix;
-// }
-
-// .col-12 {
-//   padding-top: 38px;
-//   @include span(12);
-// }
-
-// .col-4, .col-6, .col-8, .col-12 {
-//   padding-left: 16px;
-//   padding-right: 16px;
-// }
-
-// .col-4 {
-//   // background: red;
-//   @include span(4);
-// }
-
-// .col-6 {
-//   @include span(6);
-//   // @include last;
-// }
-
-// .col-8 {
-//   // background: green;
-//   padding-top: 38px;
-//   @include span(8);
-//   @include last;
-// }
-
-
-// .col-6 + .col-6 {
-//   @include last;
-// }
