@@ -6,6 +6,7 @@
 @import "partials/icons-fontawesome";
 @import "partials/layouts";
 @import "partials/navigation";
+@import "partials/teaser";
 
 body {
   background: $color-gray-lightest;
@@ -35,9 +36,12 @@ body {
 
 a {
   color: $color-first-annex;
-  font-family: $font-text;
-  font-weight: bold;
+  font-family: $font-title;
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
 }
 
 
@@ -91,13 +95,13 @@ a {
   }
   h1 {
     color: $color-gray-lightest;
-    font-family: $font-text;
     font-size: 36px;
     text-align: center;
     text-transform: uppercase;
   }
   h2 {
     border-top: 2px solid $color-first;
+    // color: red;
     color: $color-gray-medium;
     font-size: 24px;
     padding-top: 20px;

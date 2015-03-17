@@ -12,11 +12,18 @@ $color-gray-darkest: #212121;
 
 // $color-cyan: red;
 $color-cyan: #00BCD4;
-$color-cyan-darker: #0079A9;
+$color-cyan-darken: #0079A9;
+
+$color-red: #D0021B;
+$color-red-darken: darken($color-red, 10%);
+
+
+// $color-first: $color-cyan;
+// $color-first-annex: $color-cyan-darker;
 
 
 $color-first: $color-cyan;
-$color-first-annex: $color-cyan-darker;
+$color-first-annex: darken($color-first, 10%);
 
 
 $color-bg: $color-white;
@@ -28,7 +35,7 @@ $color-text-focus: $color-first;
 
 
 $font-text: 'raleway', Helvetica, Arial, sans-serif;
-$font-title: 'raleway', Helvetica, Arial, sans-serif;
+$font-title: 'raleway-bold', Helvetica, Arial, sans-serif;
 $font-handwriting: 'Pacifico', cursive;
 $font-icon-1: 'streamline';
 $font-icon-2: 'FontAwesome';
