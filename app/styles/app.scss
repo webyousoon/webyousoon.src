@@ -16,7 +16,7 @@ body {
   font-size: 14px;
   line-height: 23px;
 
-  @media screen and (min-width: 1024px) {
+  @include mq(large) {
     padding: $gutter-width-m;
   }
 
@@ -44,22 +44,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
 }
 
-#brand-title {
-  color: $color-gray-darker;
-  font-family: $font-title;
-  font-size: 48px;
-  padding-left: $gutter-width-s;
-  padding-right: $gutter-width-s;
-  padding-bottom: $gutter-height-s;
-  padding-top: $gutter-height-s; 
-  text-align: center;
-  text-transform: uppercase;
-  .handwriting {
-    color: $color-first;
-    font-size: 110px;
-    text-transform: none;
-  }
-}
 .handwriting {
   font-family: $font-handwriting;
 }

@@ -1,4 +1,30 @@
 
+#brand-title {
+  color: $color-gray-darker;
+  font-family: $font-title;
+  font-size: 48px;
+  padding-left: $gutter-width-s;
+  padding-right: $gutter-width-s;
+  padding-bottom: $gutter-height-s;
+  padding-top: $gutter-height-s; 
+  text-align: center;
+  text-transform: uppercase;
+  .handwriting {
+    color: $color-first;
+    font-size: 110px;
+    height: 80px;
+    line-height: 40px;
+    text-transform: none;
+  }
+  @include mq(large) {
+    padding-bottom: $gutter-height-l;
+    > div {
+      display: inline-block;
+    }
+  }
+}
+
+
 #nav-toggle {
   background: $color-gray-lightest;
   a {
