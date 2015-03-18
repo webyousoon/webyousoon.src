@@ -6,14 +6,9 @@
         <title>Web You Soon</title>
         <!-- <meta name="description" content=""> -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
         <link rel="stylesheet" href="css/app.css">
-
-        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-
     </head>
     <body>
 
@@ -21,20 +16,19 @@
 
           <header role="banner">
             <nav id="nav-toggle" role="navigation">
-              <a href="#" id="btn-toggle" class="">Menu</a>
+              <a href="#" id="btn-open-toggle" class="">Menu</a>
               <ul id="list-toggle" class="list-unstyled">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#values">Valeurs</a></li>
                 <li><a id="link-contactus" href="#contactus">Contact</a></li>
-                <li><a id="btn-close-toggle" href="#">Fermer</a></li>
+                <li id="btn-close-toggle"><a href="#">Fermer</a></li>
               </ul>
             </nav>
             <div id="brand-title">Web <div class="handwriting">you</div> soon</div>
             <section id="teaser">
-              <img src="img/bg-teaser.png" alt="Une superbe photo">
-              <div>
-                Des applications Web et mobiles conçues pour vous
-              </div>
+              <!-- <div id="bg-teaser"></div> -->
+              <!-- <img src="img/bg-teaser.png" alt="Une superbe photo"> -->
+              <!-- <div>Des applications Web et mobiles conçues pour vous</div> -->
             </section>
 
           <!-- <div style="clear: both;"></div> -->
@@ -97,12 +91,28 @@
             <!-- /#services -->
 
             <section id="contactus">
-              <div class="col-single picture">
-                <i class="icon icon-bubble-conversation-5"></i>
+              <div class="col-single">
+                <div class="small-teaser-contact handwriting focus-inverse">
+                  <p>Des besoins ?</p>
+                  <p>Une idée ?</p>
+                  <div class="picture">
+                    <i class="icon icon-bubble-conversation-5"></i>
+                  </div>
+                </div>
               </div>
               <div class="col-double">
-                <div class="col-12">
-                  Vous avez un projet ?
+                <div class="col-full">
+                  <div class="big-teaser-contact handwriting focus-inverse">
+                    Contactez-nous
+                  </div>
+                  <div class="contact">
+                    <p>Téléphone</p>
+                    <p><b>06.42.13.52.13</b></p>
+                  </div>
+                  <div class="contact">
+                    <p>Email</p>
+                    <p><b>contact@webyousoon.com</b></p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -163,62 +173,66 @@
 
 
 
-          <footer role="contentinfo" class="container-inverse board">
-
-            <div class="col-single">
-            </div>
-            <div class="col-double">
-              <div class="col-half">
-                <section>
-                  <h2>Contact</h2>
-                  <p>Téléphone</p>
-                  <p class="bigger"><i class="icon icon-call-2"></i> 06.42.13.52.13</p>
-                  <p>Email</p>
-                  <p class="bigger"><i class="icon icon-address-2"></i> contact@webyousoon.com</p>
-                </section>
+          <footer id="contentinfo" role="contentinfo" class="container-inverse">
+            <div class="board">
+              
+            
+              <div class="col-single">
               </div>
-              <div class="col-half">
-                <section>
-                  <h2>Réseaux sociaux</h2>
+              <div class="col-double">
+                <div class="col-half">
+                  <section>
+                    <h2>Contact</h2>
+                    <p>Téléphone</p>
+                    <p class="bigger"><i class="icon icon-call-2"></i> 06.42.13.52.13</p>
+                    <p>Email</p>
+                    <p class="bigger"><i class="icon icon-address-2"></i> contact@webyousoon.com</p>
+                  </section>
+                </div>
+                <div class="col-half">
+                  <section>
+                    <h2>Réseaux sociaux</h2>
 
-<!--                 <ul class="fa-ul">
-                  <li>
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                    </span>
-                    Twitter
-                  </li>
-                  <li><i class="fa-li fa fa-github fa-2x"></i> GitHub</li>
-                </ul> -->
-
-                  <ul class="list-unstyled">
+  <!--                 <ul class="fa-ul">
                     <li>
-                      <i class="fa fa-twitter fa-2x"></i>
-<!--                       <span class="fa-stack fa-lg">
+                      <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                      </span> -->
+                      </span>
                       Twitter
                     </li>
-                    <li>
-                      <i class="fa fa-github fa-2x"></i>
-<!--                       <span class="fa-stack fa-lg">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                      </span> -->
-                      GitHub
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div class="col-12">
-                <section class="legal">
-                  lkmlk
-                </section>
-              </div>
-            </div>
+                    <li><i class="fa-li fa fa-github fa-2x"></i> GitHub</li>
+                  </ul> -->
 
+                    <ul class="list-unstyled">
+                      <li>
+                        <i class="fa fa-twitter fa-2x"></i>
+  <!--                       <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span> -->
+                        Twitter
+                      </li>
+                      <li>
+                        <i class="fa fa-github fa-2x"></i>
+  <!--                       <span class="fa-stack fa-lg">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span> -->
+                        GitHub
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+              <div style="clear: both;"></div>
+            </div>
+            <!-- /.board -->
+            <div class="col-full">
+              <section class="legal">
+                Mentions légales
+              </section>
+            </div>
           </footer>
 
 
@@ -232,7 +246,7 @@
 
       <script>
         var jqlike = require('scripts/jqlike');
-        var btnToggle = document.getElementById('btn-toggle');
+        var btnToggle = document.getElementById('btn-open-toggle');
         btnToggle.onclick = function() {
           jqlike.toggleClass(this, 'on');
           return false;

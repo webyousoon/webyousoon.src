@@ -23,21 +23,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  > footer {
-      border-top: 4px solid $color-gray-darker;
-    .legal {
-      border-top: 2px solid $color-gray-darker;
-    }
-    i {
-      font-size: 24px;
-    }
-  }
 }
 
 a {
   color: $color-first-annex;
   font-family: $font-title;
   text-decoration: none;
+}
+
+b {
+  font-family: $font-bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,23 +48,51 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(90deg);
 }
 
+.board,
+#contactus {
+  padding-bottom: $gutter-height-l;
+  padding-top: $gutter-height-l;
+}
+
 #contactus {
   background: $color-first;
-  // colo
+  color: $color-first-annex;
 
   // background: $color-gray-lightest;
-  color: $color-first-annex;
-  font-family: $font-handwriting;
-  font-size: 64px;
-  line-height: 85px;
-  i {
-    font-size: 108px;
-  }
-  .picture {
-    text-align: center;
+  // background: $color-white;
+  // color: $color-first-annex;
+  // color: $color-first;
+  // font-family: $font-handwriting;
+  .contact {
+    font-size: 18px;
     @media screen and (min-width: $screen-m) {
-      text-align: right;
+      font-size: 24px;
     }
+    b {
+      color: $color-gray-darkest;
+    }
+  }
+  .small-teaser-contact {
+    font-size: 32px;
+    line-height: 20px;
+    position: relative;
+    i {
+      font-size: 108px;
+    }
+    .picture {
+      position: absolute;
+      top: -70px;
+      right: 0;
+      text-align: center;
+      @media screen and (min-width: $screen-m) {
+        text-align: right;
+      }
+    }
+  }
+  .big-teaser-contact {
+    font-size: 64px;
+    line-height: 85px;
+    padding-top: $gutter-height-m;
   }
 }
 
@@ -84,9 +107,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .board {
-  
-  padding-bottom: $gutter-height-xl;
-  padding-top: $gutter-height-m;
   header {
     position: relative;
   }
@@ -114,8 +134,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.focus, .focus-inverse {
+  // font-family: $font-handwriting;
+  // font-size: 32px;
+  // line-height: 43px;
+
+  // font-family: $font-handwriting;
+  // font-size: 24px;
+  // line-height: 33px;
+}
 .focus {
   color: $color-first;
+}
+.focus-inverse {
+  color: $color-white;
 }
 
 .container {
@@ -132,3 +164,15 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   padding: 0;
 }
+
+
+  footer#contentinfo {
+    border-top: 4px solid $color-gray-darker;
+    .legal {
+      border-top: 2px solid $color-gray-darker;
+    }
+    i {
+      font-size: 24px;
+    }
+  }
+

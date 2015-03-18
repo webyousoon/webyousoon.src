@@ -9,17 +9,14 @@ $color-gray-darker: #424242;
 $color-gray-darkest: #212121;
 
 
-
-// $color-cyan: red;
+$color-purple: #4A148C;
+$color-blue: #4A90E2;
+$color-yellow: #F8E71C;
 $color-cyan: #00BCD4;
 $color-cyan-darken: #0079A9;
 
 $color-red: #D0021B;
 $color-red-darken: darken($color-red, 10%);
-
-
-// $color-first: $color-cyan;
-// $color-first-annex: $color-cyan-darker;
 
 
 $color-first: $color-cyan;
@@ -36,6 +33,7 @@ $color-text-focus: $color-first;
 
 $font-text: 'raleway', Helvetica, Arial, sans-serif;
 $font-title: 'raleway-bold', Helvetica, Arial, sans-serif;
+$font-bold: 'raleway-bold', Helvetica, Arial, sans-serif;
 $font-handwriting: 'fabfeltscriptbold', 'raleway-bold';
 $font-icon-1: 'streamline';
 $font-icon-2: 'FontAwesome';
@@ -55,3 +53,5 @@ $gutter-height-l: $gutter-height * 4;
 $gutter-height-xl: $gutter-height * 6;
 
 
+
+$img-bg-teaser: url("img/bg-teaser.png");
