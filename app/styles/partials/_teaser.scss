@@ -1,6 +1,7 @@
 #teaser {
-  background-image: $img-bg-teaser;
+  background: url('../img/bg-teaser.png') no-repeat;
   font-family: $font-title;
+  height: 500px;
   position: relative;
   div {
     color: $color-text-inverse;
