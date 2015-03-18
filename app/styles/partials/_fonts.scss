@@ -52,7 +52,17 @@ Custom Fonts
   font-style: normal;
 }
 
-
+@font-face {
+  font-family: 'fabfeltscriptbold';
+  src: url('fonts/fabfelt/fabfeltscript-bold.eot');
+  src: url('fonts/fabfelt/fabfeltscript-bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/fabfelt/fabfeltscript-bold.woff2') format('woff2'),
+       url('fonts/fabfelt/fabfeltscript-bold.woff') format('woff'),
+       url('fonts/fabfelt/fabfeltscript-bold.ttf') format('truetype'),
+       url('fonts/fabfelt/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* @font-face {
   font-family: 'raleway';

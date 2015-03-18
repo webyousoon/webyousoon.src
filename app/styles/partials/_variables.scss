@@ -36,7 +36,7 @@ $color-text-focus: $color-first;
 
 $font-text: 'raleway', Helvetica, Arial, sans-serif;
 $font-title: 'raleway-bold', Helvetica, Arial, sans-serif;
-$font-handwriting: 'Pacifico', cursive;
+$font-handwriting: 'fabfeltscriptbold', 'raleway-bold';
 $font-icon-1: 'streamline';
 $font-icon-2: 'FontAwesome';
 
@@ -51,5 +51,7 @@ $gutter-width-m: $gutter-width * 2;
 // $gutter-width-l: $gutter-width;
 $gutter-height-s: $gutter-height;
 $gutter-height-m: $gutter-height * 2;
+$gutter-height-l: $gutter-height * 4;
+$gutter-height-xl: $gutter-height * 6;
 
 

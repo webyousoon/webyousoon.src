@@ -44,6 +44,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
 }
 
+#brand-title {
+  color: $color-gray-darker;
+  font-family: $font-title;
+  font-size: 48px;
+  padding-left: $gutter-width-s;
+  padding-right: $gutter-width-s;
+  padding-bottom: $gutter-height-s;
+  padding-top: $gutter-height-s; 
+  text-align: center;
+  text-transform: uppercase;
+  .handwriting {
+    color: $color-first;
+    font-size: 110px;
+    text-transform: none;
+  }
+}
+.handwriting {
+  font-family: $font-handwriting;
+}
+
 
 .icon-inverse {
   transform: rotate(90deg);
@@ -81,7 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .board {
   
-  padding-bottom: 95px;
+  padding-bottom: $gutter-height-xl;
+  padding-top: $gutter-height-m;
   header {
     position: relative;
   }
