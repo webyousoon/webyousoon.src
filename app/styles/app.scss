@@ -8,6 +8,7 @@
 @import "partials/layouts";
 @import "partials/navigation";
 @import "partials/teaser";
+@import "partials/footer";
 
 body {
   background: $color-gray-lightest;
@@ -30,6 +31,7 @@ a {
   color: $color-first-annex;
   font-family: $font-title;
   text-decoration: none;
+  transition: background 0.5s ease-out, border 0.5s ease-out;
 }
 
 b {
@@ -56,8 +58,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contactus {
-  background: $color-first;
-  color: $color-first-annex;
+  background: $color-second;
+  color: $color-second-annex;
 
   // background: $color-gray-lightest;
   // background: $color-white;
@@ -67,10 +69,11 @@ h1, h2, h3, h4, h5, h6 {
   .contact {
     font-size: 18px;
     @media screen and (min-width: $screen-m) {
-      font-size: 24px;
+      font-size: 20px;
     }
     b {
-      color: $color-gray-darkest;
+      color: $color-second-darkest;
+      // color: $color-gray-darkest;
     }
   }
   .small-teaser-contact {
@@ -130,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
     // color: red;
     color: $color-gray-medium;
     font-size: 24px;
-    padding-top: 20px;
+    padding-top: $gutter-height-s;
     // z-index: 2;
   }
 }
@@ -165,15 +168,4 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   padding: 0;
 }
-
-
-  footer#contentinfo {
-    border-top: 4px solid $color-gray-darker;
-    .legal {
-      border-top: 2px solid $color-gray-darker;
-    }
-    i {
-      font-size: 24px;
-    }
-  }
 

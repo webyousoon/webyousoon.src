@@ -93,11 +93,23 @@
         &#btn-close-toggle {
           display: none;
         }
-        #link-contactus {
-          background: $color-first;
-          color: $color-white;
+        a {
+          &:hover {
+            background: $color-first;
+            color: $color-white;
+            // border: 2px solid $color-second;
+          }
+        }
+        a#link-contactus {
+          // background: $color-second;
+          color: $color-second;
           // position: absolute;
           right: $gutter-width-s;
+          &:hover {
+            background: $color-second;
+            color: $color-second-annex;
+            // border: 2px solid $color-second;
+          }
         }
       }
     }

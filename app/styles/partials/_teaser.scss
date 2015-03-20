@@ -25,27 +25,25 @@
   }
 }
 
-@include mq(medium) {
-  #teaser {
-  }
-}
-
 @include mq(large) {
   #teaser {
     background: find-img('bg-teaser.png') no-repeat;
-    // position: absolute;
-    div#teaser-text {
-      // top: 0;
-      // width: 33.33333%;
-      // width: 50%;
-    }
+    max-width: 100%;
   }
   div#teaser-app {
     background: find-img('app.png') no-repeat;
     height: 382px;
     position: absolute;
-    right: 200px;
+    left: 478px;
     top: 90px;
     width: 281px;
   }
 }
+
+@include mq(xlarge) {
+  #teaser {
+    width: $max-width-screen;
+    height: $max-height-screen;
+  }
+}
+

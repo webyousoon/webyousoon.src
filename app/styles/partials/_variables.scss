@@ -11,6 +11,7 @@ $color-gray-darkest: #212121;
 
 $color-purple: #4A148C;
 $color-blue: #4A90E2;
+$color-orange: #FFC107;
 $color-yellow: #F8E71C;
 $color-cyan: #00BCD4;
 $color-cyan-darken: #0079A9;
@@ -23,6 +24,9 @@ $color-first: $color-cyan;
 $color-first-annex: darken($color-first, 10%);
 // $color-first-annex: $color-cyan-darken;
 
+$color-second: $color-orange;
+$color-second-annex: darken($color-second, 10%);
+$color-second-darkest: darken($color-second, 33%);
 
 $color-bg: $color-white;
 $color-bg-inverse: $color-gray-darkest;
@@ -47,10 +51,18 @@ $gutter-height: 16px;
 $gutter-width: 16px;
 $gutter-width-s: $gutter-width;
 $gutter-width-m: $gutter-width * 2;
-// $gutter-width-l: $gutter-width;
+$gutter-width-l: $gutter-width * 4;
+$gutter-width-xl: $gutter-width * 6;
 $gutter-height-s: $gutter-height;
 $gutter-height-m: $gutter-height * 2;
 $gutter-height-l: $gutter-height * 4;
 $gutter-height-xl: $gutter-height * 6;
+
+$max-width-screen: $screen-l - 2 * $gutter-width-m;
+$max-height-screen: $max-width-screen * 9 / 16;
+
+$max-width-col: $max-width-screen / 3 - 2 * $gutter-width-s;
+$max-height-col: $max-width-col * 9 / 16;
+
 
 $path-img: "../img";

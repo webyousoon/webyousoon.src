@@ -106,14 +106,14 @@
                   <div class="big-teaser-contact handwriting focus-inverse">
                     Contactez-nous
                   </div>
-                  <div class="contact">
-                    <p>Téléphone</p>
-                    <p><b>06.42.13.52.13</b></p>
-                  </div>
-                  <div class="contact">
-                    <p>Email</p>
-                    <p><b>contact@webyousoon.com</b></p>
-                  </div>
+                  <section class="contact">
+                    <i class="icon icon-call-2"></i>
+                    <p>Téléphone<br/><b>06.42.13.52.13</b></p>
+                  </section>
+                  <section class="contact">
+                    <i class="icon icon-address-2"></i>
+                    <p>Email<br/><b>contact@webyousoon.com</b></p>
+                  </section>
                 </div>
               </div>
             </section>
@@ -179,17 +179,19 @@
               
             
               <div class="col-single">
-              </div>
-              <div class="col-double">
-                <div class="col-half">
                   <section>
                     <h2>Contact</h2>
-                    <p>Téléphone</p>
-                    <p class="bigger"><i class="icon icon-call-2"></i> 06.42.13.52.13</p>
-                    <p>Email</p>
-                    <p class="bigger"><i class="icon icon-address-2"></i> contact@webyousoon.com</p>
+                    <section class="contact">
+                      <i class="icon icon-call-2"></i>
+                      <p>Téléphone<br/><b>06.42.13.52.13</b></p>
+                    </section>
+                    <section class="contact">
+                      <i class="icon icon-address-2"></i>
+                      <p>Email<br/><b>contact@webyousoon.com</b></p>
+                    </section>
                   </section>
-                </div>
+              </div>
+              <div class="col-double">
                 <div class="col-half">
                   <section>
                     <h2>Réseaux sociaux</h2>
@@ -207,22 +209,40 @@
 
                     <ul class="list-unstyled">
                       <li>
-                        <i class="fa fa-twitter fa-2x"></i>
-  <!--                       <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span> -->
-                        Twitter
+                        <a href="https://twitter.com/webyousoon">
+                          <i class="fa fa-twitter fa-2x"></i>
+    <!--                       <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                          </span> -->
+                          Twitter
+                        </a>
                       </li>
                       <li>
-                        <i class="fa fa-github fa-2x"></i>
-  <!--                       <span class="fa-stack fa-lg">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span> -->
-                        GitHub
+                        <a href="https://github.com/webyousoon">
+                          <i class="fa fa-github fa-2x"></i>
+    <!--                       <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                          </span> -->
+                          GitHub
+                        </a>
                       </li>
                     </ul>
+                  </section>
+                </div>
+                <div class="col-half">
+                  <section>
+                    <h2>Adresse</h2>
+                    <div class='embed-container'>
+                      <iframe src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBAm2WMs4MxMdLDJqVMGn6tck7azEBTJg8&q=Nantes&zoom=10'
+                      width='600' height='450' frameborder='0' style='border:0'></iframe>
+                    </div>
+                    <address>
+                      <strong>webyousoon</strong><br>
+                      61 av Lt Lavenne Montoise<br>
+                      44000 Nantes<br>
+                    </address>
                   </section>
                 </div>
               </div>
@@ -231,7 +251,8 @@
             <!-- /.board -->
             <div class="col-full">
               <section class="legal">
-                Mentions légales
+                <div>Copyright &copy; 2015 webyousoon</div>
+                <!-- <div>Mentions légales</div> -->
               </section>
             </div>
           </footer>
@@ -240,7 +261,6 @@
 
       </div>
       <!-- /.container -->
-
 
       <script src="/js/vendor.js"></script>
       <script src="/js/app.js"></script>
