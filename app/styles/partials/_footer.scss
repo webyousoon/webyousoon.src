@@ -1,4 +1,4 @@
-  section.contact {
+  .contact {
     position: relative;
     p {
       margin-left: $gutter-width-l;
@@ -23,7 +23,7 @@ footer#contentinfo {
     }
   }
 
-  section.contact {
+  .contact {
     p, i {
       color: $color-gray-medium;
     }

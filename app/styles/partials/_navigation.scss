@@ -1,6 +1,6 @@
 
 #brand-title {
-  color: $color-gray-darker;
+  color: $color-gray-darkest;
   font-family: $font-title;
   font-size: 48px;
   margin-top: $gutter-height-s;
@@ -25,6 +25,7 @@
 
 
 #nav-toggle {
+  // box-sizing: content-box;
   background: $color-gray-lightest;
   a {
     display: block;
@@ -94,20 +95,24 @@
           display: none;
         }
         a {
+          border: 2px solid $color-bg;
+          color: $color-first;
           &:hover {
-            background: $color-first;
-            color: $color-white;
-            // border: 2px solid $color-second;
+            // background: $color-first;
+            color: $color-first-annex;
+            border: 2px solid $color-first-annex;
           }
         }
         a#link-contactus {
           // background: $color-second;
+          border: 2px solid $color-bg;
           color: $color-second;
           // position: absolute;
           right: $gutter-width-s;
           &:hover {
-            background: $color-second;
+            // background: $color-second;
             color: $color-second-annex;
+            border: 2px solid $color-second-annex;
             // border: 2px solid $color-second;
           }
         }

@@ -18,15 +18,28 @@
   margin: 0;
 }
 
+[class^="col-"] > [class^="col-"] {
+  padding-left: 0;
+  padding-right: 0; 
+}
+
+@include mq(medium) {
+
+}
+
 @include mq(medium) {
   .col-double {
     padding-left: 0;
     padding-right: 0; 
   }
 
-  .col-half {
+  [class^="col-"] > .col-half,
+  [class^="col-"] > .col-full {
     padding-left: $gutter-width-s;
     padding-right: $gutter-width-s;
+  }
+
+  [class^="col-"] > .col-half {
     float: left;
     width: 50%;
   }

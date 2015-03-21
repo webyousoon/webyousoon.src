@@ -31,7 +31,7 @@ a {
   color: $color-first-annex;
   font-family: $font-title;
   text-decoration: none;
-  transition: background 0.5s ease-out, border 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 b {
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   .big-teaser-contact {
     font-size: 64px;
     line-height: 85px;
-    padding-top: $gutter-height-m;
+    // padding-top: $gutter-height-m;
   }
 }
 
@@ -111,6 +111,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .board {
+  section {
+    margin-top: $gutter-height-l;
+  }
   header {
     position: relative;
   }
@@ -131,10 +134,18 @@ h1, h2, h3, h4, h5, h6 {
   h2 {
     border-top: 2px solid $color-first;
     // color: red;
-    color: $color-gray-medium;
+    color: $color-gray-darker;
     font-size: 24px;
+    // margin-top: $gutter-height-l;
     padding-top: $gutter-height-s;
     // z-index: 2;
+  }
+}
+@include mq(large) {
+  .board {
+    section {
+      margin-top: 0;
+    }
   }
 }
 
@@ -146,6 +157,9 @@ h1, h2, h3, h4, h5, h6 {
   // font-family: $font-handwriting;
   // font-size: 24px;
   // line-height: 33px;
+
+  font-size: 18px;
+  line-height: 26px;
 }
 .focus {
   color: $color-first;
