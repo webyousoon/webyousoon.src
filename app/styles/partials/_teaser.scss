@@ -1,7 +1,10 @@
 #teaser {
   font-family: $font-title;
-  height: 500px;
+  height: 540px;
   position: relative;
+
+  // margin: 0px auto;
+
   div#teaser-text {
     // color: $color-gray-darkest;
     // color: $color-first-annex;
@@ -15,10 +18,6 @@
     position: absolute;
     bottom: 0;
     top: 0;
-    // bottom: 100px;
-    // width: 608px;
-    // background: $color-white;
-    // background: $color-gray-darkest;
     background: $color-first;
     // background: $color-first-annex;
     display: inline;
@@ -38,7 +37,7 @@
     position: absolute;
     left: 478px;
     top: 90px;
-    width: 281px;
+    width: 218px;
   }
 }
 

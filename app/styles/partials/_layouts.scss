@@ -18,13 +18,14 @@
   margin: 0;
 }
 
+// .col-full {
+//   float: none;
+//   width: 100%;
+// }
+
 [class^="col-"] > [class^="col-"] {
   padding-left: 0;
   padding-right: 0; 
-}
-
-@include mq(medium) {
-
 }
 
 @include mq(medium) {
@@ -38,19 +39,23 @@
     padding-left: $gutter-width-s;
     padding-right: $gutter-width-s;
   }
-
-  [class^="col-"] > .col-half {
-    float: left;
+  .col-half {
     width: 50%;
+  }
+  .col-half {
+    float: left;
   }
   .col-half + .col-half {
     float: right;
+    &:after {
+      @include clearfix;
+    }
   }
 }
 
 @include mq(large) {
   .wrapper {
-    margin: auto;
+    margin: $gutter-width-xl auto $gutter-width-m auto;
     // width: 960px;
   }
 
@@ -68,18 +73,11 @@
     padding-right: $gutter-width-s; 
     margin: 0;
   }
-  .col-half {
-    float: left;
-    width: 50%;
-  }
-  .col-half + .col-half {
-    float: right;
-  }
 }
 
 @include mq(xlarge) {
   .wrapper {
-    margin: auto;
+    // margin: auto;
     width: 960px;
   }
 

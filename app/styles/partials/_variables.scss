@@ -14,7 +14,8 @@ $color-blue: #4A90E2;
 $color-orange: #FFC107;
 $color-yellow: #F8E71C;
 $color-cyan: #00BCD4;
-$color-cyan-darken: #0079A9;
+$color-cyan-darken: #124A60;
+// $color-cyan-darken: #0079A9;
 
 $color-red: #D0021B;
 $color-red-darken: darken($color-red, 10%);
@@ -45,7 +46,8 @@ $font-icon-2: 'FontAwesome';
 
 $screen-s: 480px;
 $screen-m: 768px;
-$screen-l: 1024px;
+$screen-l: 960px;
+// $screen-l: 1024px;
 
 $gutter-height: 16px;
 $gutter-width: 16px;
@@ -58,7 +60,8 @@ $gutter-height-m: $gutter-height * 2;
 $gutter-height-l: $gutter-height * 4;
 $gutter-height-xl: $gutter-height * 6;
 
-$max-width-screen: $screen-l - 2 * $gutter-width-m;
+$max-width-screen: $screen-l;
+// $max-width-screen: $screen-l - 2 * $gutter-width-m;
 $max-height-screen: $max-width-screen * 9 / 16;
 
 $max-width-col: $max-width-screen / 3 - 2 * $gutter-width-s;

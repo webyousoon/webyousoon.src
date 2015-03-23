@@ -1,3 +1,16 @@
+
+@mixin clearfix() {
+    content:'';
+    display:block;
+    clear: both;
+}
+
+@mixin circle($size) {
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+}
+
 @mixin mq($size) {
   @if $size == small {
       @media screen and (max-width: $screen-s) { @content; }
@@ -13,8 +26,3 @@
   }
 }
 
-@mixin circle($size) {
-  border-radius: 50%;
-  height: $size;
-  width: $size;
-}

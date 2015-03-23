@@ -1,0 +1,48 @@
+#logo {
+  position: absolute;
+
+  top: 0;
+
+  background: $color-first;
+  color: $color-first-annex;
+  @include circle(200px);
+
+  font-family: $font-title;
+  font-size: 48px;
+  // margin-top: $gutter-height-s;
+  padding: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
+  text-align: center;
+  text-transform: uppercase;
+
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: -82px;
+  margin: $gutter-height-s auto;
+}
+#logo-wrapper > div {
+  position: relative;
+  &.web {
+  position: absolute;
+    left: 45px;
+    top: 32px;   
+  }
+  &.you {
+  position: absolute;
+    color: $color-white;
+    // color: $color-first;
+    font-family: $font-handwriting;
+    font-size: 140px;
+    height: 80px;
+    line-height: 90px;
+    text-transform: none;
+
+    left: 29px;
+    top: 28px;   
+  }
+  &.soon {
+  position: absolute;
+    left: 30px;
+    top: 140px;   
+  }
+}

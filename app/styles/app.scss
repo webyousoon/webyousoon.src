@@ -6,6 +6,7 @@
 @import "partials/icons-streamline";
 @import "partials/icons-fontawesome";
 @import "partials/layouts";
+@import "partials/logo";
 @import "partials/navigation";
 @import "partials/teaser";
 @import "partials/footer";
@@ -18,8 +19,8 @@ body {
   font-size: 14px;
   line-height: 23px;
 
-  @include mq(large) {
-    padding: $gutter-width-m;
+  @include mq(xlarge) {
+    // padding: $gutter-width-m;
   }
 
   -webkit-font-smoothing: antialiased;
@@ -42,8 +43,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
 }
 
+.clearfix:after {
+  clear: both;
+}
+
 .handwriting {
   font-family: $font-handwriting;
+}
+
+.align-right {
+  text-align: right;
 }
 
 
