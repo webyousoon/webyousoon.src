@@ -1,15 +1,69 @@
 
-#brand-title {
-  color: $color-gray-darkest;
+header#banner {
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+
+  top: 0;
+
+  background: $color-first;
+  color: $color-first-annex;
+  @include circle(200px);
+
   font-family: $font-title;
   font-size: 48px;
-  margin-top: $gutter-height-s;
+  // margin-top: $gutter-height-s;
   padding: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
   text-align: center;
   text-transform: uppercase;
+
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: $gutter-height-s auto;
+}
+#logo-wrapper > div {
+  position: relative;
+  &.web {
+  position: absolute;
+    left: 45px;
+    top: 32px;   
+  }
+  &.you {
+  position: absolute;
+    color: $color-white;
+    // color: $color-first;
+    font-family: $font-handwriting;
+    font-size: 140px;
+    height: 80px;
+    line-height: 90px;
+    text-transform: none;
+
+    left: 30px;
+    top: 28px;   
+  }
+  &.soon {
+  position: absolute;
+    left: 30px;
+    top: 140px;   
+  }
+}
+
+
+#brand-title {
+
+  
+  // color: $color-gray-darkest;
+
+
+  margin: 0px auto;
+
   .handwriting {
-    color: $color-first;
-    font-size: 110px;
+    color: $color-white;
+    // color: $color-first;
+    font-size: 140px;
     height: 80px;
     line-height: 40px;
     text-transform: none;
@@ -18,7 +72,7 @@
     margin-top: 0;
     padding-bottom: $gutter-height-l;
     > div {
-      display: inline-block;
+      // display: inline-block;
     }
   }
 }
@@ -86,7 +140,7 @@
       li {
         border-top: 0;
         display: inline-block;
-        margin: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
+        margin: $gutter-height-m $gutter-width-s $gutter-height-l $gutter-width-s;
         // text-align: left;
         // &:last-child {
         //   display: none;

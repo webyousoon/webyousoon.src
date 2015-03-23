@@ -21,8 +21,8 @@ $color-red-darken: darken($color-red, 10%);
 
 
 $color-first: $color-cyan;
-$color-first-annex: darken($color-first, 10%);
-// $color-first-annex: $color-cyan-darken;
+// $color-first-annex: darken($color-first, 10%);
+$color-first-annex: $color-cyan-darken;
 
 $color-second: $color-orange;
 $color-second-annex: darken($color-second, 10%);
