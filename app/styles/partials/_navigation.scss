@@ -33,9 +33,9 @@ header#banner {
     transition: all 0.7s ease-in-out;
     a {
       color: $color-white;
-      &#link-contactus {
-        color: $color-second;
-      }
+      // &#link-contactus {
+      //   color: $color-second;
+      // }
     }
   }
 
@@ -43,9 +43,12 @@ header#banner {
     margin-top: 2px;
   }
 
-  #menu-toggle.on + #menu-hover,
-  #link-contactus {
+  #menu-toggle.on + #menu-hover {
     background: rgba($color-first-annex, $opacity-background);
+  }
+
+  #link-contactus {
+    // background: rgba($color-first-annex, $opacity-background);
   }
 
 
@@ -55,8 +58,10 @@ header#banner {
   }
 }
 
-@include mq(medium) {
-  nav .col-half {
+// QUICK HACK !
+@media screen and (max-width: $screen-m) and (max-width: $screen-l - 1) {
+  nav .col-half,
+  nav .col-half + .col-half {
     float: none;
     width: 100%;
   }
@@ -85,11 +90,16 @@ header#banner {
       color: red;
       margin-top: 0;
       a {
+        display: inline-block;
         color: $color-first;
-        padding: 0 16px;
+        padding: 0;
+        // padding: 0 16px;
         &:hover {
           color: $color-first-annex;
         }
+      }
+      a + a {
+        padding: 0 16px;
       }
       a#link-contactus {
         color: $color-second;
@@ -99,10 +109,5 @@ header#banner {
         }
       }
     }
-
-    #menu-hover > div > div {
-      display: inline-block;
-    }
-
   }
 }

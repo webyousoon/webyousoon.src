@@ -48,7 +48,7 @@
   .col-half + .col-half {
     float: right;
     &:after {
-      @include clearfix;
+      // @include clearfix;
     }
   }
 }
