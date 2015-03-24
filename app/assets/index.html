@@ -16,44 +16,43 @@
           <header id="banner" role="banner">
             <a href="/">
               <div id="logo">
+              <span class="you">you</span>
                 <div id="logo-wrapper">
                   <div class="web">Web</div>
-                  <div class="you">you</div>
                   <div class="soon">soon</div>
                 </div>
               </div>
             </a>
-            <nav id="navigation" role="navigation" class="col-full">
+            <nav id="navigation" role="navigation" class="">
               <div id="menu-toggle">
                 <a id="btn-open-toggle" href="">Menu</a>
               </div>
-              <!-- <div> -->
+              <div id="menu-hover">
                 <div class="col-half">
                   <div>
-                    <a class="link-toggle" href="#services">Services</a>
+                    <a id="link-services" class="link-toggle" href="#services">Services</a>
                   </div>
                   <div>
-                    <a class="link-toggle" href="#values">Valeurs</a>
+                    <a id="link-values" class="link-toggle" href="#values">Valeurs</a>
                   </div>
                 </div>
                 <div class="col-half align-right">
                   <div>
-                    <a class="link-toggle" id="link-contactus" href="#contact">Contact</a>
+                    <a id="link-contactus" class="link-toggle" href="#contactus">Contact</a>
                   </div>
                 </div>
-              <!-- </div> -->
+              </div>
             </nav>
-            <div style="clear: both;"></div>
-            <section id="teaser">
-              <div id="teaser-device">
-                <div id="teaser-app"></div>
-              </div>
-              <div id="teaser-text">
-                <div id="teaser-verbatim">Applications Web et mobile conçues pour vous</div>
-              </div>
-            </section>
           </header>
 
+          <section id="teaser">
+            <div id="teaser-device">
+              <div id="teaser-app"></div>
+            </div>
+            <div id="teaser-text">
+              <div id="teaser-verbatim">Applications Web & mobile conçues pour vous</div>
+            </div>
+          </section>
 
           <main id="content" role="main">
 
@@ -280,15 +279,35 @@
       <script>
         var jqlike = require('scripts/jqlike');
         var btnToggle = document.getElementById('btn-open-toggle');
+        var menuToggle = document.getElementById('menu-toggle');
         btnToggle.onclick = function() {
-          jqlike.toggleClass(this, 'on');
+          jqlike.toggleClass(menuToggle, 'on');
           return false;
         };
-        var btnCloseToggle = document.getElementById('btn-close-toggle');
-        btnCloseToggle.onclick = function() {
-          jqlike.toggleClass(btnToggle, 'on');
-          return false;
+
+        var linkServices = document.getElementById('link-services');
+        linkServices.onclick = function() {
+          jqlike.toggleClass(menuToggle, 'on');
+          return true;
         };
+
+        var linkContact = document.getElementById('link-contactus');
+        linkContact.onclick = function() {
+          jqlike.toggleClass(menuToggle, 'on');
+          return true;
+        };
+
+        var linkValues = document.getElementById('link-values');
+        linkValues.onclick = function() {
+          jqlike.toggleClass(menuToggle, 'on');
+          return true;
+        };
+
+        // var btnCloseToggle = document.getElementById('btn-close-toggle');
+        // btnCloseToggle.onclick = function() {
+        //   jqlike.toggleClass(btnToggle, 'on');
+        //   return false;
+        // };
       </script>
 
     </body>

@@ -26,3 +26,168 @@
   }
 }
 
+@mixin logo($size) {
+  #logo {
+    background: $color-first;
+    color: $color-first-annex;
+    @include circle($size * 25);
+
+    font-family: $font-title;
+    font-size: $size * 6;
+    line-height: $size * 6;
+    padding: $size * 6.5 $size * 4;
+    text-transform: uppercase;
+
+    z-index: 11;
+
+    .you {
+    // position: relative;
+      color: $color-white;
+      // color: $color-first;
+      font-family: $font-handwriting;
+      font-size: $size * 18;
+      height: $size * 20;
+      // line-height: $size * 18;
+      text-transform: none;
+      letter-spacing: -$size * 0.75;
+
+      // margin-left: $size * 2;
+      // padding-top: $size * 2;
+
+      // left: 16px;
+      // top: 14px;
+      // top: $size * 4;
+      // left: $size * 3.5;
+      &::first-letter {
+        letter-spacing: 0;
+      }
+    }
+
+      // color: $color-white;
+      // // color: $color-first;
+      // font-family: $font-handwriting;
+      // font-size: $size * 18;
+      // height: $size * 20;
+      // line-height: $size * 11;
+      // text-transform: none;
+      // letter-spacing: -$size * 0.75;
+
+      // left: 16px;
+      // top: 14px;
+      // top: $size * 4;
+      // left: $size * 3.5;
+      &::first-letter {
+        letter-spacing: 0;
+      }
+
+      overflow: hidden;
+
+
+  }
+  #logo-wrapper > div {
+    position: relative;
+    line-height: $size * 3;
+
+    width: $size * 25;
+    position: absolute;
+      // left: 23px;
+
+    &.web,
+    &.soon {
+
+      left: 0;
+      right: 0;
+      // margin: 0 auto;
+      // top: 16px;
+      text-align: center;
+      
+    }
+
+    &.web {
+    // width: $size;
+    // position: absolute;
+      // left: 23px;
+      // left: 0;
+      // right: 0;
+      // margin: 0 auto;
+      top: $size * 4;
+      // text-align: center;
+    }
+    &.you {
+    // position: relative;
+      color: $color-white;
+      // color: $color-first;
+      font-family: $font-handwriting;
+      font-size: $size * 18;
+      height: $size * 20;
+      line-height: $size * 11;
+      text-transform: none;
+      letter-spacing: -$size * 0.75;
+
+      // left: 16px;
+      // top: 14px;
+      top: $size * 4;
+      left: $size * 3.5;
+      &::first-letter {
+        letter-spacing: 0;
+      }
+    }
+    &.soon {
+    // position: absolute;
+      // left: 15px;
+      top: $size * 18;   
+    }
+  }
+}
+
+
+// #logo {
+//   position: fixed;
+//   // position: absolute;
+
+//   top: 0;
+
+//   background: $color-first;
+//   color: $color-first-annex;
+//   @include circle(100px);
+
+//   font-family: $font-title;
+//   font-size: 24px;
+//   margin: $gutter-height-s $gutter-width-s;
+//   padding: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
+//   // text-align: center;
+//   text-transform: uppercase;
+
+//   z-index: 11;
+//   // left: 0;
+//   // right: 0;
+//   // top: 0;
+//   // margin: $gutter-height-s;
+// }
+// #logo-wrapper > div {
+//   position: relative;
+//   line-height: 12px;
+//   &.web {
+//   position: absolute;
+//     left: 23px;
+//     top: 16px;   
+//   }
+//   &.you {
+//   position: absolute;
+//     color: $color-white;
+//     // color: $color-first;
+//     font-family: $font-handwriting;
+//     font-size: 70px;
+//     height: 80px;
+//     line-height: 45px;
+//     text-transform: none;
+
+//     left: 16px;
+//     top: 14px;   
+//   }
+//   &.soon {
+//   position: absolute;
+//     left: 15px;
+//     top: 70px;   
+//   }
+// }

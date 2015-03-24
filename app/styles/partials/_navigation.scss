@@ -1,189 +1,108 @@
 
 
 header#banner {
-  position: relative;
+  // position: relative;
 }
 
 #navigation {
-
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-
-  background: $color-white;
-
-  // display: block;
-  text-align: right;
-
-  border-bottom: 2px solid $color-first-annex;
-  z-index: 4;
-
+  height: 50px;
   line-height: 32px;
+  // background: rgba($color-white, 0.5);
+  background: $color-white;
+  border-bottom: 2px solid $color-first-annex;
+  text-align: right;
+  z-index: 4;
 
   a {
     display: block;
     font-size: 18px;
-    padding: 8px 0;
+    padding: 8px 16px 8px 0;
     text-transform: uppercase;
   }
-
-  padding: $gutter-height-s $gutter-width-s;
-  height: 80px;
-  // height: 100px + $gutter-height-m;
-  // border-bottom: 2px solid red;
 
   #btn-menu-toggle {
     display: block;
   }
 
-  .link-toggle {
-    display: none;
+  #menu-toggle.on + #menu-hover,
+  #menu-hover {
+    transition: all 0.7s ease-in-out;
+    a {
+      color: $color-white;
+      &#link-contactus {
+        color: $color-second;
+      }
+    }
   }
 
+  #menu-toggle.on + #menu-hover {
+    margin-top: 2px;
+  }
+
+  #menu-toggle.on + #menu-hover,
+  #link-contactus {
+    background: rgba($color-first-annex, $opacity-background);
+  }
+
+
+  #menu-hover {
+    background: $color-white;
+    margin-top: -480px;
+  }
+}
+
+@include mq(medium) {
+  nav .col-half {
+    float: none;
+    width: 100%;
+  }
 }
 
 @include mq(large) {
   #navigation {
-
     position: relative;
-
-    height: 64px;
     text-align: left;
-    line-height: inhrit;
+    line-height: 64px;
     border-bottom: 0;
+    height: 64px;
 
-  .link-toggle {
-    display: inherit;
-  }
-  #menu-toggle {
-    display: none;
-  }
+    .link-toggle {
+      display: inherit;
+    }
+    #menu-toggle {
+      display: none;
+    }
 
-    div {
+    #menu-toggle.on + #menu-hover,
+    #menu-hover {
+      display: block;
+      // transition: all 0.5s ease-out;
+      background: $color-white;
+      color: red;
+      margin-top: 0;
+      a {
+        color: $color-first;
+        padding: 0 16px;
+        &:hover {
+          color: $color-first-annex;
+        }
+      }
+      a#link-contactus {
+        color: $color-second;
+        right: $gutter-width-s;
+        &:hover {
+          color: $color-second-annex;
+        }
+      }
+    }
+
+    #menu-hover > div > div {
       display: inline-block;
     }
 
-
-          a {
-            border-bottom: 2px solid $color-bg;
-            color: $color-first;
-            padding: 8px 16px;
-            &:hover {
-              // background: $color-first;
-              // color: $color-first-annex;
-              border-bottom: 2px solid $color-first-annex;
-            }
-          }
-          a#link-contactus {
-            // background: $color-second;
-            // border-bottom: 2px solid $color-bg;
-            color: $color-second;
-            // position: absolute;
-            right: $gutter-width-s;
-            &:hover {
-              // background: $color-second;
-              // color: $color-second-annex;
-              border-bottom: 2px solid $color-second-annex;
-              // border-bottom: 2px solid $color-second;
-            }
-          }
   }
 }
-
-
-// #brand-title {
-
-  
-//   // color: $color-gray-darkest;
-
-
-//   margin: 0px auto;
-
-//   .handwriting {
-//     color: $color-white;
-//     // color: $color-first;
-//     font-size: 140px;
-//     height: 80px;
-//     line-height: 40px;
-//     text-transform: none;
-//   }
-//   @include mq(large) {
-//     margin-top: 0;
-//     padding-bottom: $gutter-height-l;
-//     > div {
-//       // display: inline-block;
-//     }
-//   }
-// }
-
-
-// #nav-toggle {
-//   // box-sizing: content-box;
-//   background: $color-gray-lightest;
-
-//   #btn-open-toggle {
-//     padding: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
-//   }
-//   #btn-open-toggle {
-//     background: $color-bg-inverse;
-//     color: $color-text-inverse;
-//     text-align: right;
-//   }
-//   ul#list-toggle {
-//     // cursor: pointer;
-//     // height: auto;
-//     margin: 0;
-//     // max-height: 10px;
-//     // overflow: hidden;
-//     transition: max-height 0.6s ease-in;
-//     li {
-//       border-top: 2px solid $color-white;
-//       // padding: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
-//       padding: 8px 0 8px 0;
-//       text-align: right;
-//       &#btn-close-toggle {
-//         a {
-//           color: $color-black;
-//         }
-//       }
-//     }
-//   }
-//   // #btn-open-toggle.on + #list-toggle {
-//   //   max-height: 20em;
-//   // }
-// }
-
-// @include mq(large) {
-//   #nav-toggle {
-//     background: $color-bg;
-//     text-align: left;
-//     a {
-//       display: inherit;
-//     }
-//     #btn-open-toggle {
-//       display: none;
-//     }
-//     ul#list-toggle {
-
-//       // cursor: inherit;
-//       // transition: max-height 0.6s ease-in;
-
-
-//       // max-height: inherit;
-//       // position: relative;
-//       li {
-//         border-top: 0;
-//         display: inline-block;
-//         margin: $gutter-height-m $gutter-width-s $gutter-height-l $gutter-width-s;
-//         // text-align: left;
-//         // &:last-child {
-//         //   display: none;
-//         // }
-//         &#btn-close-toggle {
-//           display: none;
-//         }
-//       }
-//     }
-//   }
-// }
