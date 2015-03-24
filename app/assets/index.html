@@ -14,22 +14,6 @@
 
       <div class="wrapper container">
           <header id="banner" role="banner">
-            <nav id="navigation" role="navigation" class="col-full">
-              <div class="col-half">
-                <div>
-                  <a href="#services">Services</a>
-                </div>
-                <div>
-                  <a href="#values">Valeurs</a>
-                </div>
-              </div>
-              <div class="col-half align-right">
-                <div>
-                  <a id="link-contactus" href="#contact">Contact</a>
-                </div>
-              </div>
-            </nav>
-            <div style="clear: both;"></div>
             <a href="/">
               <div id="logo">
                 <div id="logo-wrapper">
@@ -39,9 +23,34 @@
                 </div>
               </div>
             </a>
+            <nav id="navigation" role="navigation" class="col-full">
+              <div id="menu-toggle">
+                <a id="btn-open-toggle" href="">Menu</a>
+              </div>
+              <!-- <div> -->
+                <div class="col-half">
+                  <div>
+                    <a class="link-toggle" href="#services">Services</a>
+                  </div>
+                  <div>
+                    <a class="link-toggle" href="#values">Valeurs</a>
+                  </div>
+                </div>
+                <div class="col-half align-right">
+                  <div>
+                    <a class="link-toggle" id="link-contactus" href="#contact">Contact</a>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </nav>
+            <div style="clear: both;"></div>
             <section id="teaser">
-              <div id="teaser-app"></div>
-              <div id="teaser-text">Des applications Web et mobiles conçues pour vous</div>
+              <div id="teaser-device">
+                <div id="teaser-app"></div>
+              </div>
+              <div id="teaser-text">
+                <div id="teaser-verbatim">Applications Web et mobile conçues pour vous</div>
+              </div>
             </section>
           </header>
 

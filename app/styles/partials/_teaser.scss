@@ -1,43 +1,90 @@
 #teaser {
-  font-family: $font-title;
-  height: 540px;
   position: relative;
 
-  // margin: 0px auto;
+
+  margin-top: 80px;
+
+  font-family: $font-title;
+
 
   div#teaser-text {
-    // color: $color-gray-darkest;
-    // color: $color-first-annex;
-    // color: $color-first;
-    color: $color-text-inverse;
-    font-size: 48px;
-    left: 0;
-    width: 50%;
-    // left: $gutter-width-s;
-    line-height: 85px;
-    position: absolute;
-    bottom: 0;
-    top: 0;
     background: $color-first;
-    // background: $color-first-annex;
-    display: inline;
-    padding: 5px $gutter-width-s 5px $gutter-width-s;
+    color: $color-text-inverse;
+    > div#teaser-verbatim {
+      font-size: 18px;
+      padding: $gutter-height-s $gutter-width-s;
+    }
+  }
+}
+
+@include mq(medium) {
+  div#teaser-text {
+    position: absolute;
+    // left: 0;
+    // bottom: 0;
+    // top: 0;
+    width: 50%;
+    background: $color-first;
     opacity: 0.8;
+    > div#teaser-verbatim {
+      // position: absolute;
+      bottom: 0;
+      color: $color-text-inverse;
+      font-size: 32px;
+      line-height: 85px;
+      padding: $gutter-height-s $gutter-width-s;
+    }
   }
 }
 
 @include mq(large) {
   #teaser {
-    background: find-img('bg-teaser.png') no-repeat;
+    position: relative;
+
+  margin-top: 0;
+
     max-width: 100%;
+    height: 540px;
+    background: find-img('teaser-bg.png') no-repeat;
+  }
+  div#teaser-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 50%;
+    opacity: 0.8;
+    > div#teaser-verbatim {
+      position: absolute;
+      bottom: 0;
+      font-size: 48px;
+      line-height: 85px;
+      padding: $gutter-height-s $gutter-width-s;
+    }
+  }
+  div#teaser-device,
+  div#teaser-app {
+
+  }
+  div#teaser-device {
+    position: absolute;
+    // left: 656px;
+    // left: 66.66666%;
+    right: 1.66666%;
+    top: 72px;
+    background: find-img('teaser-device.png') no-repeat;
+    width: 262px;
+    height: 468px;
   }
   div#teaser-app {
-    background: find-img('app.png') no-repeat;
-    height: 382px;
     position: absolute;
-    left: 478px;
-    top: 90px;
+    left: 23px;
+    top: 82px;
+    // left: 679px;
+    // top: 154px;
+    background: find-img('teaser-app.png') no-repeat;
     width: 218px;
+    height: 386px;
   }
 }
 

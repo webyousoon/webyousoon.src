@@ -4,46 +4,91 @@ header#banner {
   position: relative;
 }
 
-nav {
-  display: block;
-  padding: $gutter-height-s $gutter-width-s;
-  height: 64px;
-  // border-bottom: 2px solid red;
-}
-
 #navigation {
-  div {
-    display: inline-block;
-  }
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  background: $color-white;
+
+  // display: block;
+  text-align: right;
+
+  border-bottom: 2px solid $color-first-annex;
+  z-index: 4;
+
+  line-height: 32px;
+
   a {
     display: block;
     font-size: 18px;
-    padding: 4px 8px 4px 8px;
+    padding: 8px 0;
     text-transform: uppercase;
   }
 
-        a {
-          border: 2px solid $color-bg;
-          color: $color-first;
-          &:hover {
-            // background: $color-first;
-            color: $color-first-annex;
-            border: 2px solid $color-first-annex;
+  padding: $gutter-height-s $gutter-width-s;
+  height: 80px;
+  // height: 100px + $gutter-height-m;
+  // border-bottom: 2px solid red;
+
+  #btn-menu-toggle {
+    display: block;
+  }
+
+  .link-toggle {
+    display: none;
+  }
+
+}
+
+@include mq(large) {
+  #navigation {
+
+    position: relative;
+
+    height: 64px;
+    text-align: left;
+    line-height: inhrit;
+    border-bottom: 0;
+
+  .link-toggle {
+    display: inherit;
+  }
+  #menu-toggle {
+    display: none;
+  }
+
+    div {
+      display: inline-block;
+    }
+
+
+          a {
+            border-bottom: 2px solid $color-bg;
+            color: $color-first;
+            padding: 8px 16px;
+            &:hover {
+              // background: $color-first;
+              // color: $color-first-annex;
+              border-bottom: 2px solid $color-first-annex;
+            }
           }
-        }
-        a#link-contactus {
-          // background: $color-second;
-          border: 2px solid $color-bg;
-          color: $color-second;
-          // position: absolute;
-          right: $gutter-width-s;
-          &:hover {
+          a#link-contactus {
             // background: $color-second;
-            color: $color-second-annex;
-            border: 2px solid $color-second-annex;
-            // border: 2px solid $color-second;
+            // border-bottom: 2px solid $color-bg;
+            color: $color-second;
+            // position: absolute;
+            right: $gutter-width-s;
+            &:hover {
+              // background: $color-second;
+              // color: $color-second-annex;
+              border-bottom: 2px solid $color-second-annex;
+              // border-bottom: 2px solid $color-second;
+            }
           }
-        }
+  }
 }
 
 
