@@ -3,8 +3,7 @@
 @import "partials/functions";
 @import "partials/mixins";
 @import "partials/fonts";
-@import "partials/icons-streamline";
-@import "partials/icons-fontawesome";
+@import "partials/icons";
 @import "partials/layouts";
 @import "partials/logo";
 @import "partials/navigation";
@@ -43,6 +42,12 @@ b {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
+}
+
+li i + span {
+  line-height: 32px;
+  vertical-align: super;
+  padding-left: 6px;
 }
 
 .clearfix:after {

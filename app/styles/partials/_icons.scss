@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "webyousoon";
+  src:url("fonts/fontastic/webyousoon.eot");
+  src:url("fonts/fontastic/webyousoon.eot?#iefix") format("embedded-opentype"),
+    url("fonts/fontastic/webyousoon.woff") format("woff"),
+    url("fonts/fontastic/webyousoon.ttf") format("truetype"),
+    url("fonts/fontastic/webyousoon.svg#webyousoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "webyousoon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "webyousoon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-brush:before {
+  content: "a";
+}
+.icon-call:before {
+  content: "b";
+}
+.icon-email:before {
+  content: "c";
+}
+.icon-hammer:before {
+  content: "d";
+}
+.icon-twitter:before {
+  content: "e";
+}
+.icon-direction-sign:before {
+  content: "f";
+}
+.icon-cloud-upload:before {
+  content: "g";
+}
+.icon-pulse-graph-3:before {
+  content: "h";
+}
+.icon-shuffle:before {
+  content: "i";
+}
+.icon-check:before {
+  content: "j";
+}
+.icon-loop:before {
+  content: "k";
+}
+.icon-keynote:before {
+  content: "l";
+}
+.icon-github:before {
+  content: "m";
+}

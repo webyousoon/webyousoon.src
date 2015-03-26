@@ -1,13 +1,4 @@
-  .contact {
-    position: relative;
-    p {
-      margin-left: $gutter-width-l;
-    }
-    i {
-      font-size: 46px;
-      position: absolute;
-    }
-  }
+
 
 footer#contentinfo {
   border-top: 4px solid $color-gray-darker;
@@ -15,6 +6,10 @@ footer#contentinfo {
   //   height: $max-height-col;
   //   width: $max-width-col;
   // }
+
+  ul.contact li + li {
+    margin-top: 24px;
+  }
 
   a {
     color: $color-white;
@@ -24,8 +19,9 @@ footer#contentinfo {
   }
 
   .contact {
-    p, i {
+    p, i, span {
       color: $color-gray-medium;
+      margin-left: 0;
     }
     p b {
       color: $color-white; 
@@ -42,8 +38,9 @@ footer#contentinfo {
     text-align: center;
   }
   i {
-    // font-size: 24px;
-    color: $color-gray-darker;
+    font-size: 24px;
+    // color: $color-gray-darker;
+    // color: $color-white;
   }
 
 

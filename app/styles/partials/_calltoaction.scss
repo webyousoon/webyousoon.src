@@ -24,6 +24,19 @@
       // color: $color-gray-darkest;
     }
   }
+
+  .contact {
+    position: relative;
+    p {
+      margin-left: $gutter-width-l;
+    }
+    i {
+      font-size: 46px;
+      position: absolute;
+    }
+  }
+
+  
   .small-teaser-contact {
     font-size: 32px;
     line-height: 20px;
