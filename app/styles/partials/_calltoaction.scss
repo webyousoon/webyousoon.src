@@ -78,7 +78,8 @@
       position: absolute;
       left: 16px;
       top: 0;
-      background: find-img('calltoaction-device.png') no-repeat;
+      @include bg-img('calltoaction-device', '.png');
+      // background: find-img('calltoaction-device.png') no-repeat;
       width: 238px;
       height: 235px;
 
@@ -89,7 +90,8 @@
       position: absolute;
       left: 10px;
       top: 0;
-      background: find-img('calltoaction-app.png') no-repeat;
+      @include bg-img('calltoaction-app', '.png');
+      // background: find-img('calltoaction-app.png') no-repeat;
       width: 218px;
       height: 182px;
     }

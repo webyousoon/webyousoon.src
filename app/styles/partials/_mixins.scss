@@ -26,6 +26,34 @@
   }
 }
 
+@mixin bg-img($name-img, $extension) {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  /* no scale */
+  @media (min-resolution: 96dpi) {
+    background-image: find-img($name-img, '', $extension);
+    // background-size: $width $height;
+    // background-size: $width $height;
+  }
+  /* scaled by 2 */
+  @media (min-resolution: 192dpi) {
+    background-image: find-img($name-img, '@2x', $extension);
+    // background-image: '../img/teaser-device@2x.png';
+    // background-image: find-img($name-img, '@2x');
+
+    // background-size: 50% 50%;
+    // background-size: $width * 2 $height * 2;
+    // background-size: $width $height;
+  }
+  /* scaled by 3 */
+  @media (min-resolution: 288dpi) {
+    background-image: find-img($name-img, '@3x', $extension);
+    // background-image: find-img($name-img, '@3x');
+    // background-size: $width * 3 $height * 3;
+  }
+}
+
 @mixin logo($size) {
   #logo {
     background: $color-first;

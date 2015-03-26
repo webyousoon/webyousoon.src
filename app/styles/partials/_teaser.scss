@@ -10,8 +10,6 @@
     left: 0;
     bottom: 0;
     background: rgba($color-first, $opacity-background);
-
-    // color: $color-first;
     color: $color-text-inverse;
     > div#teaser-verbatim {
       width: 50%;
@@ -24,10 +22,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background: find-img('teaser-device.png') no-repeat;
-    width: 131px;
-    height: 234px;
-
+    width: 92px;
+    height: 240px;
+    @include bg-img('mini-teaser-device', '.png');
     z-index: 3;
   }
   
@@ -35,9 +32,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background: find-img('teaser-app.png') no-repeat;
-    width: 109px;
-    height: 193px;
+    @include bg-img('mini-teaser-app', '.png');
+    width: 80px;
+    height: 140px;
   }
 }
 
@@ -48,47 +45,30 @@
     margin-top: 0;
     max-width: 100%;
     height: 540px;
-    background: find-img('teaser-bg.png') no-repeat;
+    @include bg-img('teaser-bg', '.png');
 
     div#teaser-text {
-    //   position: absolute;
-    //   width: 100%;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   // top: 0;
-    //   // width: 50%;
       > div#teaser-verbatim {
-    //     position: absolute;
-    //     width: 50%;
-    //     bottom: 0;
-        // font-family: $font-text;
         font-size: 48px;
         line-height: 85px;
-    //     padding: $gutter-height-s $gutter-width-s;
       }
     }
 
     div#teaser-device {
       position: absolute;
-      // left: 656px;
-      // left: 66.66666%;
       right: 1.66666%;
-      top: 72px;
-      background: find-img('teaser-device.png') no-repeat;
-      width: 262px;
-      height: 468px;
+      width: 251px;
+      height: 460px;
+      @include bg-img('teaser-device', '.png');
     }
 
     div#teaser-app {
       position: absolute;
-      left: 23px;
-      top: 82px;
-      // left: 679px;
-      // top: 154px;
-      background: find-img('teaser-app.png') no-repeat;
+      left: 16px;
+      top: 134px;
+      @include bg-img('teaser-app', '.png');
       width: 218px;
-      height: 386px;
+      height: 326px;
     }
   }
 }
