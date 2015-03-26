@@ -20,5 +20,11 @@ exports.config = {
     templates: {
       joinTo: 'js/app.js'
     }
+  },
+  plugins: {
+    autoprefixer: {
+      browsers: ["last 1 version", "> 1%", "ie 8", "ie 7"],
+      cascade: false
+    }
   }
 };
