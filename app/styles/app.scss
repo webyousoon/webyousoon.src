@@ -50,12 +50,17 @@ li i + span {
   padding-left: 6px;
 }
 
+  ul.contact li + li {
+    margin-top: 24px;
+  }
+
 .clearfix:after {
   clear: both;
 }
 
 .handwriting {
   font-family: $font-handwriting;
+  -webkit-font-smoothing: antialiased;
 }
 
 .align-right {

@@ -7,10 +7,6 @@ footer#contentinfo {
   //   width: $max-width-col;
   // }
 
-  ul.contact li + li {
-    margin-top: 24px;
-  }
-
   a {
     color: $color-white;
     &:hover {

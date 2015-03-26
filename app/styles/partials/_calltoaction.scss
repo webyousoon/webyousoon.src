@@ -2,7 +2,7 @@
 
 
   padding-bottom: $gutter-height-l;
-  padding-top: $gutter-height-l;
+  padding-top: $gutter-height-xl;
 
 
   position: relative;
@@ -25,17 +25,6 @@
     }
   }
 
-  .contact {
-    position: relative;
-    p {
-      margin-left: $gutter-width-l;
-    }
-    i {
-      font-size: 46px;
-      position: absolute;
-    }
-  }
-
   
   .small-teaser-contact {
     font-size: 32px;
@@ -55,14 +44,36 @@
     }
   }
   .big-teaser-contact {
-    font-size: 64px;
-    line-height: 85px;
-    // padding-top: $gutter-height-m;
+    font-size: 48px;
+    line-height: 64px;
   }
 }
 
 @include mq(large) {
   #calltoaction {
+    padding-top: $gutter-height-l;
+
+    .contact {
+      font-size: 24px;
+      line-height: 32px;
+      i {
+        font-size: 32px;
+      }
+      // position: relative;
+      // span, b {
+      //   margin-left: $gutter-width-l;
+      //   padding-left: 0;
+      // }
+      // i {
+      //   font-size: 46px;
+      //   position: absolute;
+      // }
+    }
+
+    ul.contact li {
+      margin-top: 48px;
+    }
+
     div#calltoaction-device {
       position: absolute;
       left: 16px;
@@ -82,5 +93,6 @@
       width: 218px;
       height: 182px;
     }
+
   }
 }

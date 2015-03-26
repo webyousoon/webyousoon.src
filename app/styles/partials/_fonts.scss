@@ -31,7 +31,8 @@ Custom Fonts
 
 @font-face {
   font-family: 'fabfeltscriptbold';
-  src: url('fonts/fabfelt/fabfeltscript-bold.eot');
+  src: url('fonts/fabfelt/fabfeltscript-bold.svg#fabfeltscriptbold') format('svg');
+  // src: url('fonts/fabfelt/fabfeltscript-bold.eot');
   src: url('fonts/fabfelt/fabfeltscript-bold.eot?#iefix') format('embedded-opentype'),
        url('fonts/fabfelt/fabfeltscript-bold.woff2') format('woff2'),
        url('fonts/fabfelt/fabfeltscript-bold.woff') format('woff'),
