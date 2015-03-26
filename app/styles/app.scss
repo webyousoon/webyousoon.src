@@ -9,6 +9,7 @@
 @import "partials/logo";
 @import "partials/navigation";
 @import "partials/teaser";
+@import "partials/calltoaction";
 @import "partials/footer";
 
 body {
@@ -61,54 +62,12 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(90deg);
 }
 
-.board,
-#contactus {
+.board {
   padding-bottom: $gutter-height-l;
   padding-top: $gutter-height-l;
 }
 
-#contactus {
-  background: $color-second;
-  color: $color-second-annex;
 
-  // background: $color-gray-lightest;
-  // background: $color-white;
-  // color: $color-first-annex;
-  // color: $color-first;
-  // font-family: $font-handwriting;
-  .contact {
-    font-size: 18px;
-    @media screen and (min-width: $screen-m) {
-      font-size: 20px;
-    }
-    b {
-      color: $color-second-darkest;
-      // color: $color-gray-darkest;
-    }
-  }
-  .small-teaser-contact {
-    font-size: 32px;
-    line-height: 20px;
-    position: relative;
-    i {
-      font-size: 108px;
-    }
-    .picture {
-      position: absolute;
-      top: -70px;
-      right: 0;
-      text-align: center;
-      @media screen and (min-width: $screen-m) {
-        text-align: right;
-      }
-    }
-  }
-  .big-teaser-contact {
-    font-size: 64px;
-    line-height: 85px;
-    // padding-top: $gutter-height-m;
-  }
-}
 
 
 

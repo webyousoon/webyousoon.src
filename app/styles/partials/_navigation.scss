@@ -59,7 +59,7 @@ header#banner {
 }
 
 // QUICK HACK !
-@media screen and (max-width: $screen-m) and (max-width: $screen-l - 1) {
+@media screen and (min-width: $screen-s) and (max-width: $screen-m - 1) {
   nav .col-half,
   nav .col-half + .col-half {
     float: none;

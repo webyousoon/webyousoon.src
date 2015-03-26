@@ -51,17 +51,21 @@
     background: find-img('teaser-bg.png') no-repeat;
 
     div#teaser-text {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      top: 0;
-      width: 50%;
+    //   position: absolute;
+    //   width: 100%;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   // top: 0;
+    //   // width: 50%;
       > div#teaser-verbatim {
-        position: absolute;
-        bottom: 0;
+    //     position: absolute;
+    //     width: 50%;
+    //     bottom: 0;
+        // font-family: $font-text;
         font-size: 48px;
         line-height: 85px;
-        padding: $gutter-height-s $gutter-width-s;
+    //     padding: $gutter-height-s $gutter-width-s;
       }
     }
 
