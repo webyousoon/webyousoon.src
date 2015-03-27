@@ -1,23 +1,25 @@
 {
-  "name": "your-app",
-  "description": "Description",
-  "author": "Your Name",
-  "version": "0.0.1",
+  "name": "webyousoon",
+  "description": "webyousoon website",
+  "author": "Alvin Berthelot",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": ""
   },
   "scripts": {
-    "start": "brunch watch --server",
-    "test": "brunch test"
+    "build": "gulp build"
   },
-  "dependencies": {
-    "auto-reload-brunch": ">= 1.0 < 1.8",
-    "autoprefixer-brunch": "^1.8.4",
-    "clean-css-brunch": ">= 1.0 < 1.8",
-    "css-brunch": ">= 1.0 < 1.8",
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "sass-brunch": "^1.8.9",
-    "uglify-js-brunch": ">= 1.0 < 1.8"
+  "devDependencies": {
+    "del": "^1.1.1",
+    "event-stream": "^3.3.0",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-htmlmin": "^1.1.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3",
+    "imagemin-pngquant": "^4.0.0"
   }
 }
