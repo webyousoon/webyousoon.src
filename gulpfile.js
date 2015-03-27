@@ -11,6 +11,7 @@ var pngquant = require('imagemin-pngquant');
 var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
 var preprocess = require('gulp-preprocess');
+var autoprefixer = require('gulp-autoprefixer');
 
 var production = !!(argv.production);
 
@@ -31,6 +32,7 @@ gulp.task('css', ['clean'], function () {
   // concat and minify CSS files and stream CSS
   return es.concat(gulp.src('./vendor/styles/*.css'), appFile)
     .pipe(concat('app.css'))
+    .pipe(autoprefixer())
     .pipe(gulpif(production,
       [
         minifyCSS(),
