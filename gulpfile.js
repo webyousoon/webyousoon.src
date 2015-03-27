@@ -8,6 +8,11 @@ var minifyCSS = require('gulp-minify-css');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
+var gulpif = require('gulp-if');
+var argv = require('yargs').argv;
+var preprocess = require('gulp-preprocess');
+
+var production = !!(argv.production);
 
 gulp.task('clean', function (cb) {
   del([
@@ -27,23 +32,29 @@ gulp.task('css', ['clean'], function () {
   return es.concat(gulp.src('./app/assets/css/*.css'), appFile)
     .pipe(concat('app.css'))
     .pipe(minifyCSS())
-    //.pipe(rename('app.min.css'))
+    .pipe(gulpif(production,
+      rename('app.min.css'))
+    )
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('html-min', ['clean'], function() {
+gulp.task('html', ['clean'], function() {
   return gulp.src('./app/assets/*.html')
-    //.pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(preprocess({context: {NODE_ENV: production?'production':''}}))
+    .pipe(gulpif(production,
+      htmlmin({collapseWhitespace: true}))
+    )
     .pipe(gulp.dest('./public'));
 });
 
 gulp.task('image-min', ['clean'], function () {
   return gulp.src('./app/assets/img/*')
-    .pipe(imagemin({
+    .pipe(gulpif(production,
+      imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
-    }))
+    })))
     .pipe(gulp.dest('./public/img'));
 });
 
@@ -52,4 +63,4 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/css/fonts'));
 });
 
-gulp.task('build', ['clean', 'copy-fonts', 'css', 'html-min', 'image-min']);
+gulp.task('build', ['clean', 'copy-fonts', 'css', 'html', 'image-min']);
