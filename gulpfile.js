@@ -29,11 +29,13 @@ gulp.task('css', ['clean'], function () {
   var appFile = gulp.src('./app/styles/*.scss')
     .pipe(sass());
   // concat and minify CSS files and stream CSS
-  return es.concat(gulp.src('./app/assets/css/*.css'), appFile)
+  return es.concat(gulp.src('./vendor/styles/*.css'), appFile)
     .pipe(concat('app.css'))
-    .pipe(minifyCSS())
     .pipe(gulpif(production,
-      rename('app.min.css'))
+      [
+        minifyCSS(),
+        rename('app.min.css')
+      ])
     )
     .pipe(gulp.dest('./public/css'));
 });
