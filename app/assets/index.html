@@ -272,29 +272,67 @@
       <!-- @endif -->
 
       <script>
-        var jqlike = require('scripts/jqlike');
+
+        // based on Todd Motto functions
+        // http://toddmotto.com/labs/reusable-js/
+
+        // hasClass
+        function hasClass(elem, className) {
+          return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+        }
+        // addClass
+        function addClass(elem, className) {
+            if (!hasClass(elem, className)) {
+              elem.className += ' ' + className;
+            }
+        }
+        // removeClass
+        function removeClass(elem, className) {
+          var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+          if (hasClass(elem, className)) {
+                while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+                    newClass = newClass.replace(' ' + className + ' ', ' ');
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+        // toggleClass
+        function toggleClass(elem, className) {
+          var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(" " + className + " ") >= 0 ) {
+                    newClass = newClass.replace( " " + className + " " , " " );
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            } else {
+                elem.className += ' ' + className;
+            }
+        }
+
+        // custom
+
         var btnToggle = document.getElementById('btn-open-toggle');
         var menuToggle = document.getElementById('menu-toggle');
         btnToggle.onclick = function() {
-          jqlike.toggleClass(menuToggle, 'on');
+          toggleClass(menuToggle, 'on');
           return false;
         };
 
         var linkServices = document.getElementById('link-services');
         linkServices.onclick = function() {
-          jqlike.toggleClass(menuToggle, 'on');
+          toggleClass(menuToggle, 'on');
           return true;
         };
 
         var linkContact = document.getElementById('link-contactus');
         linkContact.onclick = function() {
-          jqlike.toggleClass(menuToggle, 'on');
+          toggleClass(menuToggle, 'on');
           return true;
         };
 
         var linkValues = document.getElementById('link-values');
         linkValues.onclick = function() {
-          jqlike.toggleClass(menuToggle, 'on');
+          toggleClass(menuToggle, 'on');
           return true;
         };
 
