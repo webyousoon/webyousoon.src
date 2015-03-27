@@ -63,4 +63,12 @@ gulp.task('copy-fonts', ['clean'], function() {
     .pipe(gulp.dest('./public/css/fonts'));
 });
 
-gulp.task('build', ['clean', 'copy-fonts', 'css', 'html', 'image-min']);
+gulp.task('copy-extras', function () {
+  return gulp.src([
+      './app/assets/*.*',
+      './app/assets/CNAME',
+      '!./app/assets/*.html'], {dot: true})
+    .pipe(gulp.dest('./public'));
+});
+
+gulp.task('build', ['clean', 'copy-extras', 'copy-fonts', 'css', 'html', 'image-min']);
