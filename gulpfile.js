@@ -12,6 +12,9 @@ var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
 var preprocess = require('gulp-preprocess');
 var autoprefixer = require('gulp-autoprefixer');
+var replace = require('gulp-replace');
+
+var pjson = require('./package.json');
 
 var production = !!(argv.production);
 
@@ -34,10 +37,10 @@ gulp.task('css', ['clean'], function () {
     .pipe(concat('app.css'))
     .pipe(autoprefixer())
     .pipe(gulpif(production,
-      [
-        minifyCSS(),
-        rename('app.min.css')
-      ])
+      minifyCSS())
+    )
+    .pipe(gulpif(production,
+      rename('app.min.css'))
     )
     .pipe(gulp.dest('./public/css'));
 });
@@ -48,6 +51,12 @@ gulp.task('html', ['clean'], function() {
     .pipe(gulpif(production,
       htmlmin({collapseWhitespace: true}))
     )
+    .pipe(gulp.dest('./public'));
+});
+
+gulp.task('tag', ['clean', 'html'], function() {
+  return gulp.src('./public/index.html')
+    .pipe(replace(/vx.x.x/g, pjson.version))
     .pipe(gulp.dest('./public'));
 });
 
@@ -75,4 +84,4 @@ gulp.task('copy-extras', function () {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('build', ['clean', 'copy-extras', 'copy-fonts', 'css', 'html', 'image-min']);
+gulp.task('build', ['clean', 'copy-extras', 'copy-fonts', 'css', 'html', 'image-min', 'tag']);

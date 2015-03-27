@@ -2,7 +2,7 @@
   "name": "webyousoon",
   "description": "webyousoon website",
   "author": "Alvin Berthelot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": ""
@@ -22,6 +22,7 @@
     "gulp-minify-css": "^1.0.0",
     "gulp-preprocess": "^1.2.0",
     "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.3",
     "gulp-sass": "^1.3.3",
     "imagemin-pngquant": "^4.0.0",
     "yargs": "^3.6.0"
