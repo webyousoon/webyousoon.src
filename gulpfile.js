@@ -80,6 +80,11 @@ gulp.task('copy-fonts', [], function() {
     .pipe(gulp.dest('./public/css/fonts'));
 });
 
+gulp.task('copy-icons', [], function() {
+  return gulp.src(['./app/assets/icons/**'])
+    .pipe(gulp.dest('./public'));
+});
+
 gulp.task('copy-extras', function () {
   return gulp.src([
       './app/assets/*.*',
@@ -100,7 +105,7 @@ gulp.task('serve', ['build'], function() {
     gulp.watch('./app/styles/*.scss', ['css']);
 });
 
-gulp.task('build', ['copy-extras', 'copy-fonts', 'css', 'html', 'image-min', 'tag']);
+gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'css', 'html', 'image-min', 'tag']);
 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
