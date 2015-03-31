@@ -110,7 +110,3 @@ gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'css', 'html', 'i
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
-
-gulp.task('deliver', ['clean'], function () {
-  gulp.start('build --production');
-});
