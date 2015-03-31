@@ -1,2 +1,5 @@
-# Indique l'adresse du fichier sitemap.xml
+# sitemap.xml location
 sitemap: http://www.webyousoon.com/sitemap.xml
+# No follow 
+User-agent: *
+Disallow: /404.html
