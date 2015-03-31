@@ -63,7 +63,7 @@ gulp.task('css', [], function () {
 });
 
 gulp.task('html', [], function() {
-  return gulp.src('./app/assets/*.html')
+  return gulp.src('./app/assets/**/*.html')
     .pipe(preprocess({context: {NODE_ENV: production?'production':''}}))
     .pipe(gulpif(production,
       htmlmin({collapseWhitespace: true}))
@@ -115,7 +115,7 @@ gulp.task('serve', ['build'], function() {
         }
     });
 
-    gulp.watch('./app/assets/*.html', ['html']);
+    gulp.watch('./app/assets/**/*.html', ['html']);
     gulp.watch('./app/styles/**', ['css']);
     gulp.watch('./app/scripts/**', ['js']);
 });
