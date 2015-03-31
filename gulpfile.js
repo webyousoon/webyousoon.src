@@ -17,6 +17,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var uglify = require('gulp-uglify');
 var sitemap = require('gulp-sitemap');
+var stripDebug = require('gulp-strip-debug');
 
 var pjson = require('./package.json');
 
@@ -36,6 +37,10 @@ gulp.task('clean', function (cb) {
 gulp.task('js', function() {
   gulp.src('./app/scripts/*.js')
     .pipe(concat('app.js'))
+    // delete console/alert/debug into JS files
+    .pipe(gulpif(production,
+      stripDebug())
+    )
     .pipe(gulpif(production,
       uglify())
     )
