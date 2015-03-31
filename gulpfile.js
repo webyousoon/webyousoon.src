@@ -13,6 +13,7 @@ var argv = require('yargs').argv;
 var preprocess = require('gulp-preprocess');
 var autoprefixer = require('gulp-autoprefixer');
 var replace = require('gulp-replace');
+var server = require('gulp-server-livereload');
 
 var pjson = require('./package.json');
 
@@ -82,6 +83,15 @@ gulp.task('copy-extras', function () {
       './app/assets/CNAME',
       '!./app/assets/*.html'], {dot: true})
     .pipe(gulp.dest('./public'));
+});
+
+gulp.task('webserver', function() {
+  gulp.src('./public')
+    .pipe(server({
+      defaultFile: 'index.html',
+      livereload: true,
+      open: true
+    }));
 });
 
 gulp.task('build', ['clean', 'copy-extras', 'copy-fonts', 'css', 'html', 'image-min', 'tag']);
