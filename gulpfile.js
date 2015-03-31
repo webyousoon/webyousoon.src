@@ -13,7 +13,7 @@ var argv = require('yargs').argv;
 var preprocess = require('gulp-preprocess');
 var autoprefixer = require('gulp-autoprefixer');
 var replace = require('gulp-replace');
-var server = require('gulp-server-livereload');
+var browserSync = require('browser-sync');
 
 var pjson = require('./package.json');
 
@@ -85,13 +85,13 @@ gulp.task('copy-extras', function () {
     .pipe(gulp.dest('./public'));
 });
 
-gulp.task('webserver', function() {
-  gulp.src('./public')
-    .pipe(server({
-      defaultFile: 'index.html',
-      livereload: true,
-      open: true
-    }));
+// Static server
+gulp.task('serve', function() {
+    browserSync({
+        server: {
+            baseDir: "./public"
+        }
+    });
 });
 
 gulp.task('build', ['clean', 'copy-extras', 'copy-fonts', 'css', 'html', 'image-min', 'tag']);
