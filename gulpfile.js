@@ -15,6 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var replace = require('gulp-replace');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var uglify = require('gulp-uglify');
 
 var pjson = require('./package.json');
 
@@ -28,6 +29,19 @@ gulp.task('clean', function (cb) {
     '!./public/.git',
     '!./public/.gitignore'
   ], cb);
+});
+
+gulp.task('js', function() {
+  gulp.src('./app/scripts/*.js')
+    .pipe(concat('app.js'))
+    .pipe(gulpif(production,
+      uglify())
+    )
+    .pipe(gulpif(production,
+      rename('app.min.js'))
+    )
+    .pipe(gulp.dest('./public/js'))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('css', [], function () {
@@ -103,9 +117,10 @@ gulp.task('serve', ['build'], function() {
 
     gulp.watch('./app/assets/*.html', ['html']);
     gulp.watch('./app/styles/**', ['css']);
+    gulp.watch('./app/scripts/**', ['js']);
 });
 
-gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'css', 'html', 'image-min', 'tag']);
+gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'js', 'css', 'html', 'image-min', 'tag']);
 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
