@@ -16,10 +16,12 @@ var replace = require('gulp-replace');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var uglify = require('gulp-uglify');
+var sitemap = require('gulp-sitemap');
 
 var pjson = require('./package.json');
 
 var production = !!(argv.production);
+
 
 gulp.task('clean', function (cb) {
   del([
@@ -73,7 +75,7 @@ gulp.task('html', [], function() {
 });
 
 gulp.task('tag', ['html'], function() {
-  return gulp.src('./public/index.html')
+  return gulp.src('./public/*.html')
     .pipe(replace(/vx.x.x/g, pjson.version))
     .pipe(gulp.dest('./public'));
 });
@@ -107,6 +109,21 @@ gulp.task('copy-extras', function () {
     .pipe(gulp.dest('./public'));
 });
 
+// Build the sitemap
+gulp.task('sitemap', function () {
+  return gulp.src('./app/assets/**/*.html')
+    .pipe(sitemap({
+        siteUrl: 'http://www.webyousoon.com',
+        mappings: [{
+          pages: ['*.html'],
+          changefreq: 'monthly',
+          priority: 1,
+          lastmod: Date.now()
+        }]
+    }))
+    .pipe(gulp.dest('./public'));
+});
+
 // Static server
 gulp.task('serve', ['build'], function() {
     browserSync({
@@ -120,7 +137,7 @@ gulp.task('serve', ['build'], function() {
     gulp.watch('./app/scripts/**', ['js']);
 });
 
-gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'js', 'css', 'html', 'image-min', 'tag']);
+gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'js', 'css', 'html', 'image-min', 'tag', 'sitemap']);
 
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
