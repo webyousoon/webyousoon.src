@@ -102,7 +102,7 @@ gulp.task('serve', ['build'], function() {
     });
 
     gulp.watch('./app/assets/*.html', ['html']);
-    gulp.watch('./app/styles/*.scss', ['css']);
+    gulp.watch('./app/styles/**', ['css']);
 });
 
 gulp.task('build', ['copy-extras', 'copy-fonts', 'copy-icons', 'css', 'html', 'image-min', 'tag']);

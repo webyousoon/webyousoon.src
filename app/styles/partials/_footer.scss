@@ -8,6 +8,9 @@ footer#contentinfo {
   // }
 
   a {
+    display: block;
+    // padding: $gutter-height-s 0;
+    margin: $gutter-height-s 0;
     color: $color-white;
     &:hover {
       color: $color-second;
@@ -29,7 +32,7 @@ footer#contentinfo {
     // border-top: 2px solid $color-gray-darker;
     color: $color-gray-medium;
     font-size: 12px;
-    padding: $gutter-height-s 0 $gutter-height-s 0;
+    padding: $gutter-height-s 0;
     margin-top: $gutter-height-m;
     text-align: center;
   }
@@ -62,6 +65,15 @@ footer#contentinfo {
     //   height: $max-height-col;
     //   width: $max-width-col;
     // }
+  }
+}
+
+@include mq(xlarge) {
+  footer#contentinfo {
+    a {
+      display: inline-block;
+      margin: 0;
+    }
   }
 }
 
