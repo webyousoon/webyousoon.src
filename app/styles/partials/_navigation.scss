@@ -103,7 +103,8 @@ header#banner {
       a + a {
         padding: 0 16px;
       }
-      a#link-contactus {
+      a#link-contactus,
+      a#link-blog, {
         color: $color-second;
         right: $gutter-width-s;
         &:hover {
