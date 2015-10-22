@@ -27,6 +27,3 @@ tmp/
 
 # Output folder.
 public/
-
-# Bower stuff.
-bower_components/
