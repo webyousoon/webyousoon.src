@@ -76,7 +76,9 @@ gulp.task('js', function() {
 gulp.task('css', function () {
   // keep stream CSS after Sass pre-processing
   var appFile = gulp.src(paths.styles.src)
-    .pipe($.sass());
+    .pipe($.sass().on('error', function logError(error) {
+      console.error(error);
+    }));
   // concat and minify CSS files and stream CSS
   return es.concat(gulp.src('./vendor/styles/*.css'), appFile)
     .pipe($.concat('app.css'))
