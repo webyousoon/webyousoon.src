@@ -38,42 +38,62 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-brush:before {
-  content: "a";
-}
-.icon-call:before {
-  content: "b";
-}
-.icon-email:before {
-  content: "c";
-}
-.icon-hammer:before {
-  content: "d";
-}
-.icon-twitter:before {
-  content: "e";
-}
-.icon-direction-sign:before {
-  content: "f";
-}
-.icon-cloud-upload:before {
-  content: "g";
-}
-.icon-pulse-graph-3:before {
-  content: "h";
-}
-.icon-shuffle:before {
-  content: "i";
-}
-.icon-check:before {
-  content: "j";
-}
-.icon-loop:before {
-  content: "k";
-}
-.icon-keynote:before {
-  content: "l";
-}
-.icon-github:before {
-  content: "m";
+$icon-list: (
+  ("brush", "a"),
+  ("call", "b"),
+  ("email", "c"),
+  ("hammer", "d"),
+  ("twitter", "e"),
+  ("direction", "f"),
+  ("cloud", "g"),
+  ("pulse", "h"),
+  ("shuffle", "i"),
+  ("check", "j"),
+  ("loop", "k"),
+  ("keynote", "l"),
+  ("github", "m"),
+  ("tags", "n"),
+  ("arrows-separate-double", "o"),
+  ("arrows-separate-single", "p"),
+  ("arrow-in-right", "q"),
+  ("arrow-in-top", "r"),
+  ("arrow-in-bottom", "s"),
+  ("arrow-in-left", "t"),
+  ("arrow-out-left", "u"),
+  ("arrow-out-right", "v"),
+  ("arrow-out-top", "w"),
+  ("arrow-out-bottom", "x"),
+  ("more-circle", "y"),
+  ("more-square", "z"),
+  ("love", "A"),
+  ("facebook", "B"),
+  ("google-plus", "C"),
+  ("tag", "D"),
+  ("browser", "E"),
+  ("blog", "F"),
+  ("hand-cursor", "G"),
+  ("star", "H"),
+  ("start-filled", "I"),
+  ("reward-1", "J"),
+  ("reward-2", "K"),
+  ("reward-3", "L"),
+  ("database", "M"),
+  ("server", "N"),
+  ("device", "O"),
+  ("place", "P"),
+  ("time-past", "Q"),
+  ("triangle-top", "R"),
+  ("triangle-bottom", "S"),
+  ("triangle-left", "T"),
+  ("triangle-right", "U"),
+  ("mark-top", "V"),
+  ("mark-bottom", "W"),
+  ("mark-left", "X"),
+  ("mark-right", "Y")
+);
+
+@each $name, $content in $icon-list {
+  .icon-#{$name}:before {
+    content: $content;
+  }
 }
