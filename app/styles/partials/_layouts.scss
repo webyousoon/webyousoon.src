@@ -77,8 +77,7 @@
 
 @include mq(xlarge) {
   .wrapper {
-    // margin: auto;
-    width: 960px;
+    width: $max-width-screen;
   }
 
   .col-single {
