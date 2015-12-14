@@ -74,20 +74,30 @@ gulp.task('js', function() {
 });
 
 gulp.task('css', function () {
-  // keep stream CSS after Sass pre-processing
-  var appFile = gulp.src(paths.styles.src)
-    .pipe($.sass().on('error', function logError(error) {
+
+  var sassOptions = {
+    errLogToConsole: true,
+    outputStyle: 'expanded'
+  };
+  var autoprefixerOptions = {
+    browsers: ['Android 4']
+  };
+
+  return gulp.src(paths.styles.src)
+    .pipe($.if(!production, $.sourcemaps.init()))
+    .pipe($.sass(sassOptions)).on('error', function logError(error) {
       console.error(error);
-    }));
-  // concat and minify CSS files and stream CSS
-  return es.concat(gulp.src('./vendor/styles/*.css'), appFile)
-    .pipe($.concat('app.css'))
-    .pipe($.autoprefixer())
-    .pipe($.if(production,
-      $.minifycss())
+    })
+    .pipe($.if(!production, $.sourcemaps.write('./stylesheets/maps')))
+    .pipe($.if(!production,
+      $.rename('app.css'))
     )
     .pipe($.if(production,
       $.rename('app.min.css'))
+    )
+    // .pipe($.autoprefixer(autoprefixerOptions))
+    .pipe($.if(production,
+      $.minifycss())
     )
     .pipe(gulp.dest(paths.styles.dest))
     .pipe(reload({stream: true}));
@@ -167,15 +177,20 @@ gulp.task('sitemap', function () {
 
 // Static server
 gulp.task('serve', ['build'], function() {
-    browserSync({
-        server: {
-            baseDir: basePaths.dest
-        }
-    });
 
-    gulp.watch(paths.html.src, ['html']);
-    gulp.watch(paths.styles.src, ['css']);
-    gulp.watch(paths.scripts.src, ['js']);
+  var browserSyncOptions = {
+    server: {
+      baseDir: basePaths.dest
+    },
+    open: false,
+    reloadOnRestart: true
+  }
+
+  browserSync(browserSyncOptions);
+
+  gulp.watch(paths.html.src, ['html']);
+  gulp.watch(paths.styles.src, ['css']);
+  gulp.watch(paths.scripts.src, ['js']);
 });
 
 // ******************************************
