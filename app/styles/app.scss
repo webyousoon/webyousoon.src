@@ -94,6 +94,9 @@ li i + span {
   section {
     margin-top: $gutter-height-l;
   }
+  .vignette {
+    margin-bottom: $gutter-height-m;
+  }
   header {
     position: relative;
   }
@@ -102,23 +105,22 @@ li i + span {
     font-size: 48px;
     position: absolute;
     right: 0;
-    top: 12px;
-    // z-index: 1;
+    top: 0;
   }
   h1 {
     color: $color-gray-lightest;
     font-size: 36px;
+    margin-bottom: $gutter-height-m;
     text-align: center;
     text-transform: uppercase;
   }
   h2 {
-    border-top: 2px solid $color-first;
-    // color: red;
+    border-bottom: 1px solid $color-first;
     color: $color-gray-darker;
     font-size: 24px;
-    // margin-top: $gutter-height-l;
+    margin-bottom: $gutter-height-s;
+    padding-bottom: $gutter-height-s;
     padding-top: $gutter-height-s;
-    // z-index: 2;
   }
 }
 @include mq(large) {
