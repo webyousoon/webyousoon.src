@@ -17,7 +17,7 @@ var pjson = require('./package.json');
 var production = !!(argv.production);
 var basePaths = {
   src: './app/',
-  dest: './public/'
+  dest: './webyousoon.github.io/'
 };
 var paths = {
   html: {
@@ -44,11 +44,12 @@ var paths = {
 
 gulp.task('clean', function (cb) {
   del([
-    // delete everything under public directory
-    './public/*',
+    // delete everything under dest directory
+    basePaths.dest + '*',
     // except Git files
-    '!./public/.git',
-    '!./public/.gitignore'
+    '!' + basePaths.dest +'.git',
+    '!' + basePaths.dest + '.gitignore',
+    '!' + basePaths.dest + '.htaccess'
   ], cb);
 });
 
@@ -140,7 +141,7 @@ gulp.task('tag', ['html'], function() {
 
 gulp.task('copy-fonts', [], function() {
   return gulp.src(['./app/assets/css/fonts/**'])
-    .pipe(gulp.dest('./public/css/fonts'));
+    .pipe(gulp.dest(basePaths.dest + 'css/fonts'));
 });
 
 gulp.task('copy-icons', [], function() {
