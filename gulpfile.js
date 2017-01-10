@@ -11,6 +11,7 @@ var $ = require('gulp-load-plugins')({
     'gulp-minify-css': 'minifycss'
   }
 });
+var moment = require('moment');
 
 // variables
 var pjson = require('./package.json');
@@ -132,6 +133,7 @@ gulp.task('image-min', [], function () {
 gulp.task('tag', ['html'], function() {
   return gulp.src(paths.html.dest + '*.html')
     .pipe($.replace(/vx.x.x/g, pjson.version))
+    .pipe($.replace(/copyrightYear/g, moment().format('YYYY')))
     .pipe(gulp.dest(paths.html.dest));
 });
 
