@@ -10,14 +10,14 @@
   // px
   font-size: $font-size;
   // rem
-  //font-size: pxtorem($font-size, $font-size-base);
+  font-size: pxtorem($font-size, $font-size-base);
 }
 
 @mixin line-height($font-size, $font-size-base, $line-height) {
   // px
   line-height: $font-size * $line-height;
   // rem
-  //line-height: pxtorem($font-size, $font-size-base) * $line-height;
+  line-height: pxtorem($font-size, $font-size-base) * $line-height;
 }
 
 @mixin clearfix() {
