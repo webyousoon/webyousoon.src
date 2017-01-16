@@ -1,4 +1,5 @@
-@charset "UTF-8";
+// Bye bye encoding issues
+@charset 'utf-8';
 
 @font-face {
   font-family: "webyousoon";
@@ -9,7 +10,6 @@
     url("fonts/fontastic/webyousoon.svg#webyousoon") format("svg");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @mixin font-icon() {
@@ -84,12 +84,17 @@ $icon-list: (
   ("mark-top", "V"),
   ("mark-bottom", "W"),
   ("mark-left", "X"),
-  ("mark-right", "Y")
+  ("mark-right", "Y"),
+  ("pen", "Z"),
+  ("write-pen", "0"),
+  ("keyboard", "1"),
+  ("cli", "2"),
+  ("cursor", "3"),
+  ("settings", "4")
 );
 
 @each $name, $content in $icon-list {
   .icon-#{$name}:before {
-    // @include font-icon;
     content: $content;
   }
 }

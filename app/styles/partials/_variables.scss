@@ -1,3 +1,5 @@
+// Bye bye encoding issues
+@charset 'utf-8';
 
 $color-white: #FFFFFF;
 $color-black: #000000;
@@ -45,8 +47,24 @@ $font-text: 'raleway', Helvetica, Arial, sans-serif;
 $font-title: 'raleway-bold', Helvetica, Arial, sans-serif;
 $font-bold: 'raleway-bold', Helvetica, Arial, sans-serif;
 $font-handwriting: 'fabfeltscriptbold', 'raleway-bold';
+$font-code: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 $font-icon-1: 'streamline';
 $font-icon-2: 'FontAwesome';
+
+// font-size
+$font-size-base-s: 16px;
+$font-size-base-m: 16px;
+$font-size-base-l: 14px;
+$font-size-base-xl: 14px;
+//
+$font-size-shortcut: 30px;
+
+
+// line-height
+$line-height-s: 1.5;
+$line-height-m: 1.5;
+$line-height-l: 1.65;
+$line-height-xl: 1.65;
 
 $screen-s: 480px;
 $screen-m: 768px;

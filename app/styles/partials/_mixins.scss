@@ -1,3 +1,24 @@
+// Bye bye encoding issues
+@charset 'utf-8';
+
+@mixin text($font-size, $font-size-base, $line-height) {
+  @include font-size($font-size, $font-size-base);
+  @include line-height($font-size, $font-size-base, $line-height);
+}
+
+@mixin font-size($font-size, $font-size-base) {
+  // px
+  font-size: $font-size;
+  // rem
+  //font-size: pxtorem($font-size, $font-size-base);
+}
+
+@mixin line-height($font-size, $font-size-base, $line-height) {
+  // px
+  line-height: $font-size * $line-height;
+  // rem
+  //line-height: pxtorem($font-size, $font-size-base) * $line-height;
+}
 
 @mixin clearfix() {
     content:'';
@@ -15,13 +36,13 @@
   @if $size == small {
       @media screen and (max-width: $screen-s) { @content; }
   }
-  @if $size == medium {
+  @if $size == medium or $size == m {
       @media screen and (min-width: $screen-s + 1) { @content; }
   }
-  @if $size == large {
+  @if $size == large or $size == l {
       @media screen and (min-width: $screen-m) { @content; }
   }
-  @if $size == xlarge {
+  @if $size == xlarge  or $size == xl {
       @media screen and (min-width: $screen-l) { @content; }
   }
 }
@@ -33,24 +54,14 @@
   /* no scale */
   @media (min-resolution: 96dpi) {
     background-image: find-img($name-img, '', $extension);
-    // background-size: $width $height;
-    // background-size: $width $height;
   }
   /* scaled by 2 */
   @media (min-resolution: 192dpi) {
     background-image: find-img($name-img, '@2x', $extension);
-    // background-image: '../img/teaser-device@2x.png';
-    // background-image: find-img($name-img, '@2x');
-
-    // background-size: 50% 50%;
-    // background-size: $width * 2 $height * 2;
-    // background-size: $width $height;
   }
   /* scaled by 3 */
   @media (min-resolution: 288dpi) {
     background-image: find-img($name-img, '@3x', $extension);
-    // background-image: find-img($name-img, '@3x');
-    // background-size: $width * 3 $height * 3;
   }
 }
 
@@ -69,48 +80,21 @@
     z-index: 11;
 
     .you {
-    // position: relative;
       color: $color-white;
-      // color: $color-first;
       font-family: $font-handwriting;
       font-size: $size * 18;
       height: $size * 20;
-      // line-height: $size * 18;
       text-transform: none;
       letter-spacing: -$size * 0.75;
-
-      // margin-left: $size * 2;
-      // padding-top: $size * 2;
-
-      // left: 16px;
-      // top: 14px;
-      // top: $size * 4;
-      // left: $size * 3.5;
       &::first-letter {
         letter-spacing: 0;
       }
     }
 
-      // color: $color-white;
-      // // color: $color-first;
-      // font-family: $font-handwriting;
-      // font-size: $size * 18;
-      // height: $size * 20;
-      // line-height: $size * 11;
-      // text-transform: none;
-      // letter-spacing: -$size * 0.75;
-
-      // left: 16px;
-      // top: 14px;
-      // top: $size * 4;
-      // left: $size * 3.5;
-      &::first-letter {
-        letter-spacing: 0;
-      }
-
-      overflow: hidden;
-
-
+    &::first-letter {
+      letter-spacing: 0;
+    }
+    overflow: hidden;
   }
   #logo-wrapper > div {
     position: relative;
@@ -118,42 +102,25 @@
 
     width: $size * 25;
     position: absolute;
-      // left: 23px;
 
     &.web,
     &.soon {
-
       left: 0;
       right: 0;
-      // margin: 0 auto;
-      // top: 16px;
       text-align: center;
-      
     }
 
     &.web {
-    // width: $size;
-    // position: absolute;
-      // left: 23px;
-      // left: 0;
-      // right: 0;
-      // margin: 0 auto;
       top: $size * 4;
-      // text-align: center;
     }
     &.you {
-    // position: relative;
       color: $color-white;
-      // color: $color-first;
       font-family: $font-handwriting;
       font-size: $size * 18;
       height: $size * 20;
       line-height: $size * 11;
       text-transform: none;
       letter-spacing: -$size * 0.75;
-
-      // left: 16px;
-      // top: 14px;
       top: $size * 4;
       left: $size * 3.5;
       &::first-letter {
@@ -161,61 +128,7 @@
       }
     }
     &.soon {
-    // position: absolute;
-      // left: 15px;
-      top: $size * 18;   
+      top: $size * 18;
     }
   }
 }
-
-
-// #logo {
-//   position: fixed;
-//   // position: absolute;
-
-//   top: 0;
-
-//   background: $color-first;
-//   color: $color-first-annex;
-//   @include circle(100px);
-
-//   font-family: $font-title;
-//   font-size: 24px;
-//   margin: $gutter-height-s $gutter-width-s;
-//   padding: $gutter-height-s $gutter-width-s $gutter-height-s $gutter-width-s;
-//   // text-align: center;
-//   text-transform: uppercase;
-
-//   z-index: 11;
-//   // left: 0;
-//   // right: 0;
-//   // top: 0;
-//   // margin: $gutter-height-s;
-// }
-// #logo-wrapper > div {
-//   position: relative;
-//   line-height: 12px;
-//   &.web {
-//   position: absolute;
-//     left: 23px;
-//     top: 16px;   
-//   }
-//   &.you {
-//   position: absolute;
-//     color: $color-white;
-//     // color: $color-first;
-//     font-family: $font-handwriting;
-//     font-size: 70px;
-//     height: 80px;
-//     line-height: 45px;
-//     text-transform: none;
-
-//     left: 16px;
-//     top: 14px;   
-//   }
-//   &.soon {
-//   position: absolute;
-//     left: 15px;
-//     top: 70px;   
-//   }
-// }

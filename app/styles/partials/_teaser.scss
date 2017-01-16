@@ -1,3 +1,6 @@
+// Bye bye encoding issues
+@charset 'utf-8';
+
 #teaser {
   position: relative;
   margin-top: 50px;
@@ -27,7 +30,7 @@
     @include bg-img('mini-teaser-device', '.png');
     z-index: 3;
   }
-  
+
   div#teaser-app {
     position: absolute;
     right: 0;

@@ -1,0 +1,136 @@
+// Bye bye encoding issues
+@charset 'utf-8';
+
+%basic-text {
+  @include text($font-size-base-s, $font-size-base-s, $line-height-s);
+  @include mq(m) {
+    @include text($font-size-base-m, $font-size-base-m, $line-height-m);
+  }
+  @include mq(l) {
+    @include text($font-size-base-l, $font-size-base-l, $line-height-l);
+  }
+  @include mq(xl) {
+    @include text($font-size-base-xl, $font-size-base-xl, $line-height-xl);
+  }
+}
+
+
+/* BASE */
+
+body {
+  @extend %basic-text;
+
+  background: $color-near-white;
+  color: $color-text;
+
+  font-family: $font-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* TITRES */
+
+$small-baseline: 10px;
+$big-baseline: 20px;
+
+$titles-font-size: (
+  h1: 36px,
+  h2: 30px,
+  h3: 24px,
+  h4: 18px,
+  h5: 14px,
+  h6: 12px
+);
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+}
+
+@each $title, $font-size in $titles-font-size {
+  #{$title}, .#{$title} {
+
+    @include font-size($font-size, $font-size-base-s);
+    @include mq(m) {
+      @include font-size($font-size, $font-size-base-m);
+    }
+    @include mq(l) {
+      @include font-size($font-size, $font-size-base-l);
+    }
+    @include mq(xl) {
+      @include font-size($font-size, $font-size-base-xl);
+    }
+
+    @include line-height($font-size, $font-size-base-s, 1);
+    @include mq(m) {
+      @include line-height($font-size, $font-size-base-m, 1);
+    }
+    @include mq(l) {
+      @include line-height($font-size, $font-size-base-l, 1);
+    }
+    @include mq(xl) {
+      @include line-height($font-size, $font-size-base-xl, 1);
+    }
+
+  }
+}
+
+b, strong {
+  font-family: $font-bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+code {
+
+  @extend %basic-text;
+
+  font-family: $font-code;
+
+  &[class^="code-type-"],
+  &[class*=" code-type-"] {
+
+    $size-icon-code: 24px;
+    $margin-icon-size: 1.5 * $size-icon-code;
+
+    background: lighten($color-second, 45%);
+    border: 1px solid $color-second-annex;
+    border-radius: 6px;
+    color: $color-second-darkest;
+    display: inline-block;
+    padding: 6px 12px;
+    position: relative;
+    margin-left: $margin-icon-size;
+
+    &::before {
+      @extend %font-icon;
+      color: $color-second-annex;
+      font-size: $size-icon-code;
+      left: - $margin-icon-size;
+      position: absolute;
+      top: 0;
+    }
+  }
+  &.code-type-shortcut {
+    font-size: $font-size-shortcut;
+    &::before {
+      content: '1';
+    }
+  }
+  &.code-type-cli {
+    &::before {
+      content: '2';
+    }
+  }
+  &.code-type-ui-menu {
+    &::before {
+      content: '3';
+    }
+  }
+  &.code-type-settings {
+    &::before {
+      content: '4';
+    }
+  }
+}

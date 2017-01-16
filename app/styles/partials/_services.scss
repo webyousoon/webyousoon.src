@@ -1,0 +1,9 @@
+// Bye bye encoding issues
+@charset 'utf-8';
+
+#services {
+  h3 {
+    border-top: 2px solid $color-first;
+    padding-top: $gutter-height-s;
+  }
+}

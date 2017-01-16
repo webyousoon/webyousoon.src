@@ -1,4 +1,10 @@
+// Bye bye encoding issues
+@charset 'utf-8';
 
 @function find-img($name-img, $suffix, $file) {
   @return url("#{$path-img}/#{$name-img}#{$suffix}#{$file}");
+}
+
+@function pxtorem($font-size, $font-size-base) {
+  @return $font-size / $font-size-base * 1rem;
 }

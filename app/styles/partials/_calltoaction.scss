@@ -1,3 +1,6 @@
+// Bye bye encoding issues
+@charset 'utf-8';
+
 #calltoaction {
 
 
@@ -25,7 +28,7 @@
     }
   }
 
-  
+
   .small-teaser-contact {
     font-size: 32px;
     line-height: 20px;
@@ -85,7 +88,7 @@
 
       z-index: 3;
     }
-    
+
     div#calltoaction-app {
       position: absolute;
       left: 10px;

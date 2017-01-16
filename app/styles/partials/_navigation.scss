@@ -1,8 +1,5 @@
-
-
-header#banner {
-  // position: relative;
-}
+// Bye bye encoding issues
+@charset 'utf-8';
 
 #navigation {
   position: fixed;
@@ -11,7 +8,6 @@ header#banner {
   top: 0;
   height: 50px;
   line-height: 32px;
-  // background: rgba($color-white, 0.5);
   background: $color-white;
   border-bottom: 2px solid $color-first-annex;
   text-align: right;
@@ -21,7 +17,6 @@ header#banner {
     display: inline-block;
     font-size: 18px;
     padding: 8px 16px 8px 16px;
-    // padding: 8px 16px 8px 0;
     text-transform: uppercase;
   }
 
@@ -35,9 +30,6 @@ header#banner {
     a {
       display: block;
       color: $color-white;
-      // &#link-contactus {
-      //   color: $color-second;
-      // }
     }
   }
 
@@ -48,11 +40,6 @@ header#banner {
   #menu-toggle.on + #menu-hover {
     background: rgba($color-first-annex, $opacity-background);
   }
-
-  #link-contactus {
-    // background: rgba($color-first-annex, $opacity-background);
-  }
-
 
   #menu-hover {
     background: $color-white;
@@ -87,7 +74,6 @@ header#banner {
     #menu-toggle.on + #menu-hover,
     #menu-hover {
       display: block;
-      // transition: all 0.5s ease-out;
       background: $color-white;
       color: red;
       margin-top: 0;
@@ -95,7 +81,6 @@ header#banner {
         display: inline-block;
         color: $color-first;
         padding: 0;
-        // padding: 0 16px;
         &:hover {
           color: $color-first-annex;
         }
