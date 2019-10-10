@@ -1,333 +1,434 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Webyousoon - Réalisations d'applications web et mobile</title>
-  <link rel="canonical" href="http://www.webyousoon.com" />
-  <!-- //////////////////////////////////// -->
-  <!-- METAS -->
-  <!-- //////////////////////////////////// -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- metas classiques -->
-  <meta name="description" content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles.">
-  <meta name="keywords" content="agence web, web agency, site web, site internet, site mobile, responsive web design, rwd, smartphone, tablet, tablette, html, CSS, JavaScript, application mobile, iOS, application iPhone, application iPad, appstore, app store, Android, application Android, android market, google play, développement mobile, Webyousoon, webyousoon, Nantes, Loire-Atlantique, Pays de la Loire">
-  <!-- metas Open Graph -->
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Webyousoon - Réalisations d'applications web et mobile" />
-  <meta property="og:description" content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles." />
-  <meta property="og:url" content="http://www.webyousoon.com" />
-  <meta property="og:site_name" content="Webyousoon" />
-  <!-- metas Google -->
-  <!-- @if NODE_ENV='production' -->
-  <meta name="google-site-verification" content="OCg_HDhgP2S_aGkmudaZkpyTEornhvRUaPNm3Nzom6k" />
-  <!-- @endif -->
-  <!-- metas Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@webyousoon" />
-  <meta name="twitter:title" content="Webyousoon - Réalisations d'applications web et mobile" />
-  <meta name="twitter:description" content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles." />
-  <meta name="twitter:image" content="http://www.webyousoon.com/img/logo.png" />
-  <!-- favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <!-- //////////////////////////////////// -->
-  <!-- CSS -->
-  <!-- //////////////////////////////////// -->
-  <!-- @if NODE_ENV!='production' -->
-  <link rel="stylesheet" href="css/app.css">
-  <!-- @endif -->
-  <!-- @if NODE_ENV='production' -->
-  <link rel="stylesheet" href="css/app.min.css">
-  <!-- @endif -->
-</head>
-<body>
-
-  <div class="site-wrapper container">
-
-    <header id="banner" role="banner">
-      <a href="/">
-        <div id="logo"></div>
-      </a>
-      <nav id="navigation" role="navigation" class="">
-        <div id="menu-toggle">
-          <a id="btn-open-toggle" href="">Menu</a>
-        </div>
-        <div id="menu-hover">
-          <div class="col-half">
-            <a id="link-services" class="link-toggle" href="#services">Services</a>
-            <a id="link-values" class="link-toggle" href="#values">Valeurs</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Webyousoon - Réalisations d'applications web et mobile</title>
+    <link rel="canonical" href="http://www.webyousoon.com" />
+    <!-- //////////////////////////////////// -->
+    <!-- METAS -->
+    <!-- //////////////////////////////////// -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- metas classiques -->
+    <meta
+      name="description"
+      content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles."
+    />
+    <meta
+      name="keywords"
+      content="agence web, web agency, site web, site internet, site mobile, responsive web design, rwd, smartphone, tablet, tablette, html, CSS, JavaScript, application mobile, iOS, application iPhone, application iPad, appstore, app store, Android, application Android, android market, google play, développement mobile, Webyousoon, webyousoon, Nantes, Loire-Atlantique, Pays de la Loire"
+    />
+    <!-- metas Open Graph -->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Webyousoon - Réalisations d'applications web et mobile"
+    />
+    <meta
+      property="og:description"
+      content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles."
+    />
+    <meta property="og:url" content="http://www.webyousoon.com" />
+    <meta property="og:site_name" content="Webyousoon" />
+    <!-- metas Google -->
+    <!-- @if NODE_ENV='production' -->
+    <meta
+      name="google-site-verification"
+      content="OCg_HDhgP2S_aGkmudaZkpyTEornhvRUaPNm3Nzom6k"
+    />
+    <!-- @endif -->
+    <!-- metas Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@webyousoon" />
+    <meta
+      name="twitter:title"
+      content="Webyousoon - Réalisations d'applications web et mobile"
+    />
+    <meta
+      name="twitter:description"
+      content="Agence web nantaise pour concevoir, réaliser et mettre en service vos applications web et mobiles."
+    />
+    <meta
+      name="twitter:image"
+      content="http://www.webyousoon.com/img/logo.png"
+    />
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/apple-touch-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/apple-touch-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/apple-touch-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-touch-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-touch-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-touch-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon-180x180.png"
+    />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/android-chrome-192x192.png"
+      sizes="192x192"
+    />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- //////////////////////////////////// -->
+    <!-- CSS -->
+    <!-- //////////////////////////////////// -->
+    <!-- @if NODE_ENV!='production' -->
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- @endif -->
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/app.min.css" />
+    <!-- @endif -->
+  </head>
+  <body>
+    <div class="site-wrapper container">
+      <header id="banner" role="banner">
+        <a href="/">
+          <div id="logo"></div>
+        </a>
+        <nav id="navigation" role="navigation" class="">
+          <div id="menu-toggle">
+            <a id="btn-open-toggle" href="">Menu</a>
           </div>
-          <div class="col-half align-right">
-            <!-- <a id="link-blog" class="link-toggle" href="http://blog.webyousoon.com">Blog</a> -->
-            <a id="link-contactus" class="link-toggle" href="#calltoaction">Contact</a>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section id="teaser">
-      <div id="teaser-device">
-        <div id="teaser-app"></div>
-      </div>
-      <div id="teaser-text">
-        <div id="teaser-verbatim">Applications<br/>web & mobiles<br/>conçues pour vous</div>
-      </div>
-    </section>
-
-    <main id="content" role="main">
-
-      <section id="services" class="row board">
-        <div class="col-single">
-          <h1>Services</h1>
-          <p class="focus">Nous proposons des services dans toutes les étapes clés pour réaliser des applications web et mobiles.</p>
-        </div>
-        <div class="col-double">
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Conseil</h2>
-                <i class="icon icon-direction"></i>
-              </header>
-              <p>Accompagnement et pédagogie sur les multiples possibilités fonctionnelles et techniques qui s'offrent à vous pour répondre à vos objectifs.</p>
-            </section>
-          </div>
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Réalisation</h2>
-                <i class="icon icon-hammer"></i>
-                <i class="icon icon-brush icon-inverse"></i>
-              </header>
-              <p>Conception, maquettage et développement de solutions ergonomiques pour vos utilisateurs et pérennes techniquement.</p>
-            </section>
-          </div>
-          <div style="clear: both;"></div>
-        </div>
-        <div class="col-double">
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Mise en service</h2>
-                <i class="icon icon-cloud-upload"></i>
-              </header>
-              <p>Déploiement, hébergement des applications web et publication sur les stores privés (AppStore, Google Play) pour les applications mobiles.</p>
-            </section>
-          </div>
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Suivi et gestion</h2>
-                <i class="icon icon-pulse-graph"></i>
-              </header>
-              <p>Maintenance, évolutions et analyse du trafic pour améliorer constamment vos applications.</p>
-            </section>
-          </div>
-          <div style="clear: both;"></div>
-        </div>
-      </section>
-      <!-- /#services -->
-
-
-      <section id="calltoaction" class="row">
-        <div class="col-single">
-          <div id="calltoaction-device">
-            <div id="calltoaction-app"></div>
-          </div>
-        </div>
-        <div class="col-double">
-          <div class="col-full">
-            <div class="big-teaser-contact handwriting focus-inverse">
-              On prend rendez-vous ?
+          <div id="menu-hover">
+            <div class="col-half">
+              <a id="link-services" class="link-toggle" href="#services"
+                >Services</a
+              >
+              <a id="link-values" class="link-toggle" href="#values">Valeurs</a>
             </div>
-            <section>
-              <ul class="list-unstyled contact">
-                <li>
-                  <i class="icon icon-call"></i>
-                  <span>Téléphone</span><br/>
-                  <b>06.42.13.52.13</b>
-                </li>
-                <li>
-                  <i class="icon icon-email"></i>
-                  <span>Email</span><br/>
-                  <b>contact@webyousoon.com</b>
-                </li>
-              </ul>
-            </section>
+            <div class="col-half align-right">
+              <!-- <a id="link-blog" class="link-toggle" href="http://blog.webyousoon.com">Blog</a> -->
+              <a id="link-contactus" class="link-toggle" href="#calltoaction"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="teaser">
+        <div id="teaser-device">
+          <div id="teaser-app"></div>
+        </div>
+        <div id="teaser-text">
+          <div id="teaser-verbatim">
+            Applications<br />web & mobiles<br />conçues pour vous
           </div>
         </div>
       </section>
-      <!-- /#calltoaction -->
 
-
-      <section id="values" class="board row">
-        <div class="col-single">
-          <h1>Valeurs</h1>
-          <p class="focus">Nous agissons selon des valeurs qui nous semblent primordiales pour un accompagnement de qualité.</p>
-        </div>
-        <div class="col-double">
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Collaboration</h2>
-                <i class="icon icon-shuffle"></i>
-              </header>
-              <p>Échanges réguliers autour de vos attentes, de vôtre métier, </p>
-            </section>
+      <main id="content" role="main">
+        <section id="services" class="row board">
+          <div class="col-single">
+            <h1>Services</h1>
+            <p class="focus">
+              Nous proposons des services dans toutes les étapes clés pour
+              réaliser des applications web et mobiles.
+            </p>
           </div>
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Simplicité</h2>
-                <i class="icon icon-check"></i>
-              </header>
-              <p>Priorité aux solutions les plus simples qui peuvent apporter de la valeur à vos utilisateurs.</p>
-            </section>
+          <div class="col-double">
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Conseil</h2>
+                  <i class="icon icon-direction"></i>
+                </header>
+                <p>
+                  Accompagnement et pédagogie sur les multiples possibilités
+                  fonctionnelles et techniques qui s'offrent à vous pour
+                  répondre à vos objectifs.
+                </p>
+              </section>
+            </div>
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Réalisation</h2>
+                  <i class="icon icon-hammer"></i>
+                  <i class="icon icon-brush icon-inverse"></i>
+                </header>
+                <p>
+                  Conception, maquettage et développement de solutions
+                  ergonomiques pour vos utilisateurs et pérennes techniquement.
+                </p>
+              </section>
+            </div>
+            <div style="clear: both;"></div>
           </div>
-          <div style="clear: both;"></div>
-        </div>
-        <div class="col-double">
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Agilité</h2>
-                <i class="icon icon-loop"></i>
-              </header>
-              <p>Analyses régulières factuelles, afin d'améliorer la réalisation du projet et optimiser les résultats.</p>
-            </section>
+          <div class="col-double">
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Mise en service</h2>
+                  <i class="icon icon-cloud-upload"></i>
+                </header>
+                <p>
+                  Déploiement, hébergement des applications web et publication
+                  sur les stores privés (AppStore, Google Play) pour les
+                  applications mobiles.
+                </p>
+              </section>
+            </div>
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Suivi et gestion</h2>
+                  <i class="icon icon-pulse-graph"></i>
+                </header>
+                <p>
+                  Maintenance, évolutions et analyse du trafic pour améliorer
+                  constamment vos applications.
+                </p>
+              </section>
+            </div>
+            <div style="clear: both;"></div>
           </div>
-          <div class="col-half">
-            <section class="vignette">
-              <header>
-                <h2>Contribution</h2>
-                <i class="icon icon-keynote"></i>
-              </header>
-              <p>Partage du savoir lors de nombreuses conférences professionnelles et contribution à des projets "open source".</p>
-            </section>
+        </section>
+        <!-- /#services -->
+
+        <section id="calltoaction" class="row">
+          <div class="col-single">
+            <div id="calltoaction-device">
+              <div id="calltoaction-app"></div>
+            </div>
           </div>
-          <div style="clear: both;"></div>
-        </div>
-      </section>
+          <div class="col-double">
+            <div class="col-full">
+              <div class="big-teaser-contact handwriting focus-inverse">
+                On prend rendez-vous ?
+              </div>
+              <section>
+                <ul class="list-unstyled contact">
+                  <li>
+                    <i class="icon icon-call"></i>
+                    <span>Téléphone</span><br />
+                    <b>06.42.13.52.13</b>
+                  </li>
+                  <li>
+                    <i class="icon icon-email"></i>
+                    <span>Email</span><br />
+                    <b>contact@webyousoon.com</b>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </section>
+        <!-- /#calltoaction -->
 
-    </main>
+        <section id="values" class="board row">
+          <div class="col-single">
+            <h1>Valeurs</h1>
+            <p class="focus">
+              Nous agissons selon des valeurs qui nous semblent primordiales
+              pour un accompagnement de qualité.
+            </p>
+          </div>
+          <div class="col-double">
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Collaboration</h2>
+                  <i class="icon icon-shuffle"></i>
+                </header>
+                <p>
+                  Échanges réguliers autour de vos attentes, de vôtre métier,
+                </p>
+              </section>
+            </div>
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Simplicité</h2>
+                  <i class="icon icon-check"></i>
+                </header>
+                <p>
+                  Priorité aux solutions les plus simples qui peuvent apporter
+                  de la valeur à vos utilisateurs.
+                </p>
+              </section>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+          <div class="col-double">
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Agilité</h2>
+                  <i class="icon icon-loop"></i>
+                </header>
+                <p>
+                  Analyses régulières factuelles, afin d'améliorer la
+                  réalisation du projet et optimiser les résultats.
+                </p>
+              </section>
+            </div>
+            <div class="col-half">
+              <section class="vignette">
+                <header>
+                  <h2>Contribution</h2>
+                  <i class="icon icon-keynote"></i>
+                </header>
+                <p>
+                  Partage du savoir lors de nombreuses conférences
+                  professionnelles et contribution à des projets "open source".
+                </p>
+              </section>
+            </div>
+            <div style="clear: both;"></div>
+          </div>
+        </section>
+      </main>
 
-
-    <footer id="contentinfo" role="contentinfo" class="container-inverse">
-      <div class="board">
-
-        <div class="col-single">
-
+      <footer id="contentinfo" role="contentinfo" class="container-inverse">
+        <div class="board">
+          <div class="col-single">
             <section class="footer-vignette">
               <h2>Contact</h2>
               <p class="contact tel">
-                Téléphone<br/>
+                Téléphone<br />
                 <b>+33 (0)6 42 13 52 13</b>
               </p>
               <p class="contact email">
-                Email<br/>
+                Email<br />
                 <b>contact@webyousoon.com</b>
               </p>
             </section>
+          </div>
 
-        </div>
-
-        <div class="col-double">
-          <div class="col-half">
-
-            <address class="vcard">
+          <div class="col-double">
+            <div class="col-half">
+              <address class="vcard">
+                <section class="footer-vignette">
+                  <h2>Adresse</h2>
+                  <p class="place fn"><a class="url" href="#">Webyousoon</a></p>
+                  <p></p>
+                  <p class="adr">
+                    <span class="street-address">61 av Lt Lavenne Montoise</span
+                    ><br />
+                    <span class="postal-code">44000</span>
+                    <span class="locality">Nantes</span><br />
+                    <span class="country-name">France</span>
+                  </p>
+                </section>
+              </address>
+            </div>
+            <div class="col-half">
               <section class="footer-vignette">
-                <h2>Adresse</h2>
-                <p class="place fn"><a class="url" href="#">Webyousoon</a><p>
-                <p class="adr">
-                  <span class="nickname">Atelier 9</span><br>
-                  <span class="street-address">9 rue des Olivettes</span><br>
-                  <span class="postal-code">44000</span> <span class="locality">Nantes</span><br>
-                  <span class="country-name">France</span>
-                </p>
+                <h2>Réseaux sociaux</h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://twitter.com/webyousoon">
+                      <i class="icon icon-twitter"></i>
+                      <span>Twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/webyousoon">
+                      <i class="icon icon-github"></i>
+                      <span>GitHub</span>
+                    </a>
+                  </li>
+                </ul>
               </section>
-            </address>
-
+            </div>
           </div>
-          <div class="col-half">
-
-            <section class="footer-vignette">
-              <h2>Réseaux sociaux</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="https://twitter.com/webyousoon">
-                    <i class="icon icon-twitter"></i>
-                    <span>Twitter</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/webyousoon">
-                    <i class="icon icon-github"></i>
-                    <span>GitHub</span>
-                  </a>
-                </li>
-              </ul>
-            </section>
-
-          </div>
+          <div style="clear: both;"></div>
         </div>
-        <div style="clear: both;"></div>
-      </div>
-      <!-- /.board -->
+        <!-- /.board -->
 
-      <div class="col-full">
+        <div class="col-full">
+          <section class="legal">
+            <div class="copyright">
+              <a href="http://www.webyousoon.com">Webyousoon</a> &copy;
+              copyrightYear
+            </div>
+            <div>Version du site: vx.x.x</div>
+            <!-- <div>Mentions légales</div> -->
+          </section>
+        </div>
+      </footer>
+    </div>
+    <!-- /.container -->
 
-        <section class="legal">
-          <div class="copyright"><a href="http://www.webyousoon.com">Webyousoon</a> &copy; copyrightYear</div>
-          <div>Version du site: vx.x.x</div>
-          <!-- <div>Mentions légales</div> -->
-        </section>
+    <!-- //////////////////////////////////// -->
+    <!-- JS -->
+    <!-- //////////////////////////////////// -->
 
-      </div>
+    <!-- @if NODE_ENV='production' -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "UA-61256435-1", "auto");
+      ga("send", "pageview");
+    </script>
+    <!-- @endif -->
 
-    </footer>
-
-
-
-  </div>
-  <!-- /.container -->
-
-  <!-- //////////////////////////////////// -->
-  <!-- JS -->
-  <!-- //////////////////////////////////// -->
-
-  <!-- @if NODE_ENV='production' -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-61256435-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-  <!-- @endif -->
-
-  <!-- @if NODE_ENV!='production' -->
-  <script src="js/app.js"></script>
-  <!-- @endif -->
-  <!-- @if NODE_ENV='production' -->
-  <script src="js/app.min.js"></script>
-  <!-- @endif -->
-
-</body>
+    <!-- @if NODE_ENV!='production' -->
+    <script src="js/app.js"></script>
+    <!-- @endif -->
+    <!-- @if NODE_ENV='production' -->
+    <script src="js/app.min.js"></script>
+    <!-- @endif -->
+  </body>
 </html>
