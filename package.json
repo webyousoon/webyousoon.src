@@ -31,7 +31,7 @@
     "gulp-strip-debug": "1.1.0",
     "gulp-uglify": "3.0.0",
     "imagemin-pngquant": "5.0.1",
-    "moment": "2.18.1",
+    "moment": "2.24.0",
     "yargs": "8.0.2"
   }
 }
